@@ -37,6 +37,17 @@ class PalmettoScrollSnap {
         $this->init_hooks();
     }
     
+    /**
+     * Get plugin image URL
+     * Helper function to get image URLs from the plugin's assets directory
+     * 
+     * @param string $image_path Path to image relative to assets/images/
+     * @return string Full URL to the image
+     */
+    public static function get_image_url($image_path) {
+        return plugin_dir_url(__FILE__) . 'assets/images/' . $image_path;
+    }
+    
     private function load_dependencies() {
         // Load admin files
         if (is_admin()) {

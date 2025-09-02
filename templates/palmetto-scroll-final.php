@@ -74,6 +74,12 @@ if (!defined('ABSPATH')) {
         margin: 0;
     }
     
+    /* Override flex for wildlife section to fix layout */
+    .pss-snap-section.pss-wildlife-section {
+        display: block;
+        padding-top: 60px;
+    }
+    
     /* Make last section slightly shorter as a visual cue */
     .pss-snap-section:last-child {
         min-height: 95vh;
@@ -87,8 +93,8 @@ if (!defined('ABSPATH')) {
         background: white; 
     }
     #pss-wildlife-control { 
-        background: #232931; 
-        color: white; 
+        background: white; 
+        color: #333; 
     }
     #pss-process { 
         background: #f8f9fa; 
@@ -216,6 +222,355 @@ if (!defined('ABSPATH')) {
         background: white;
     }
     
+    /* Trust Badges Section - Third Section - Circular Design */
+    .pss-trust-badges {
+        background: #f8f9fa;
+        padding: 80px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .pss-trustindex-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto 50px;
+        padding: 0 20px;
+        display: block;
+        clear: both;
+        min-height: 100px; /* Reserve space for widget */
+        position: relative;
+    }
+    
+    /* TrustIndex widget styles */
+    .pss-trustindex-container > div,
+    .pss-trustindex-container iframe,
+    #ti-widget-container-cfc8cc643d5d833d873607bd747 {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+    }
+    
+    .pss-trust-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(30px, 8vw, 80px);
+        flex-wrap: wrap;
+        width: 100%;
+        clear: both;
+    }
+    
+    .pss-trust-badge {
+        width: clamp(200px, 25vw, 280px);
+        height: clamp(200px, 25vw, 280px);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        position: relative;
+        transition: all 0.3s ease;
+        gap: clamp(8px, 2vw, 15px);
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .pss-trust-badge:hover {
+        transform: translateY(-5px) scale(1.05);
+        text-decoration: none;
+        color: white;
+    }
+    
+    /* Google Badge - Dark Green */
+    .pss-trust-badge.google {
+        background: linear-gradient(135deg, #2d5016, #4a6b2a);
+    }
+    
+    /* BBB Badge - Dark Blue */
+    .pss-trust-badge.bbb {
+        background: linear-gradient(135deg, #1e3a5f, #2c4f7c);
+    }
+    
+    /* Facebook Badge - Teal Green */
+    .pss-trust-badge.facebook {
+        background: linear-gradient(135deg, #2d5f4f, #4a7c6b);
+    }
+    
+    .pss-badge-icon {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: bold;
+        color: white;
+        line-height: 1;
+        margin-bottom: clamp(5px, 1vw, 10px);
+    }
+    
+    .pss-badge-stars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(2px, 0.5vw, 4px);
+        margin-bottom: clamp(5px, 1vw, 8px);
+    }
+    
+    .pss-badge-stars svg {
+        width: clamp(16px, 4vw, 24px);
+        height: clamp(16px, 4vw, 24px);
+        fill: #ff6b35;
+    }
+    
+    .pss-badge-title {
+        font-size: clamp(1rem, 2.5vw, 1.4rem);
+        font-weight: bold;
+        color: white;
+        margin: 0;
+        line-height: 1.2;
+    }
+    
+    .pss-badge-subtitle {
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        color: #90c695;
+        margin: 0;
+        font-weight: 500;
+    }
+    
+    /* BBB specific styling */
+    .pss-trust-badge.bbb .pss-badge-subtitle {
+        color: #90c695;
+    }
+    
+    .pss-bbb-text {
+        font-size: clamp(1rem, 2.2vw, 1.3rem);
+        font-weight: bold;
+        color: white;
+        margin: 0;
+        line-height: 1.1;
+        text-align: center;
+    }
+    
+    .pss-bbb-logo {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        font-weight: bold;
+        color: white;
+        margin-bottom: clamp(5px, 1vw, 10px);
+    }
+
+    /* Wildlife Carousel Section Styles */
+    .pss-wildlife-section {
+        background: white;
+        padding: 60px 0;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .pss-wildlife-header {
+        text-align: center;
+        max-width: 100%;
+        margin: 0 auto 50px;
+        padding: 0 20px;
+    }
+    
+    .pss-wildlife-header h2 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        color: #2d5016;
+        margin-bottom: 20px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+    
+    .pss-wildlife-header p {
+        font-size: clamp(1.1rem, 2vw, 1.3rem);
+        color: #5a5a5a;
+        line-height: 1.6;
+        margin-bottom: 35px;
+    }
+    
+    .pss-wildlife-header p strong {
+        color: #2d5016;
+        font-weight: 600;
+    }
+    
+    .pss-wildlife-header .pss-btn-primary {
+        display: inline-block;
+        background: #ff6b35;
+        color: white;
+        padding: 16px 35px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    }
+    
+    .pss-wildlife-header .pss-btn-primary:hover {
+        background: #ff5722;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    }
+    
+    /* Carousel Container */
+    .pss-carousel-wrapper {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .pss-carousel-container {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .pss-carousel-track {
+        display: flex;
+        transition: transform 0.5s ease;
+        gap: 20px;
+        padding: 0 5px;
+    }
+    
+    /* Wildlife Cards */
+    .pss-wildlife-card {
+        flex: 0 0 calc(33.333% - 14px);
+        min-width: 0;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    
+    .pss-wildlife-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+    
+    .pss-wildlife-card-image {
+        width: 100%;
+        height: 250px;
+        background: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 20px;
+    }
+    
+    .pss-wildlife-card-image img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+    
+    .pss-wildlife-card:hover .pss-wildlife-card-image img {
+        transform: scale(1.05);
+    }
+    
+    .pss-wildlife-card-content {
+        padding: 30px 25px;
+        text-align: center;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .pss-wildlife-card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #2d5016;
+        margin-bottom: 15px;
+        letter-spacing: -0.3px;
+    }
+    
+    .pss-wildlife-card-description {
+        font-size: 0.95rem;
+        color: #5a5a5a;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        flex-grow: 1;
+    }
+    
+    .pss-wildlife-card-link {
+        display: inline-block;
+        color: #6ab04c;
+        font-weight: 700;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        padding: 10px 0;
+        border-bottom: 2px solid transparent;
+    }
+    
+    .pss-wildlife-card-link:hover {
+        color: #5a9e3f;
+        border-bottom-color: #6ab04c;
+    }
+    
+    /* Pagination Dots */
+    .pss-carousel-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 35px;
+    }
+    
+    .pss-carousel-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #c8d6e5;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+        padding: 0;
+    }
+    
+    .pss-carousel-dot.active {
+        background: #4a90e2;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .pss-carousel-dot:hover:not(.active) {
+        background: #8395a7;
+    }
+    
+    /* Tablet View */
+    @media (max-width: 1024px) {
+        .pss-wildlife-card {
+            flex: 0 0 calc(50% - 10px);
+        }
+        
+        .pss-carousel-wrapper {
+            padding: 0 20px;
+        }
+        
+        .pss-carousel-track {
+            gap: 15px;
+        }
+    }
+    
     /* Mobile responsive */
     @media (max-width: 768px) {
         .pss-wrapper {
@@ -242,66 +597,1000 @@ if (!defined('ABSPATH')) {
         .pss-scroll-hint {
             display: none;
         }
+        
+        .pss-trust-container {
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .pss-trust-badge {
+            width: clamp(180px, 60vw, 250px);
+            height: clamp(180px, 60vw, 250px);
+        }
+        
+        /* Wildlife Carousel Mobile */
+        .pss-wildlife-card {
+            flex: 0 0 calc(100% - 10px);
+            max-width: 100%;
+        }
+        
+        .pss-carousel-wrapper {
+            padding: 0 15px;
+        }
+        
+        .pss-carousel-track {
+            gap: 10px;
+            padding: 0;
+        }
+        
+        .pss-wildlife-section {
+            padding: 40px 0;
+        }
+        
+        .pss-wildlife-header {
+            padding: 0 15px;
+        }
+    }
+    
+    /* Hero Section Styles - Comprehensive Solution */
+    .pss-hero-section {
+        --hero-padding: 20px;
+        --hero-min-height: 100vh;
+        --hero-green: rgba(32, 61, 10, 0.87);
+        --hero-yellow: #ffd906;
+        --hero-white: #ffffff;
+        
+        position: relative;
+        min-height: var(--hero-min-height);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;  /* Hide overflow but position elements properly */
+    }
+    
+    /* Background Layers */
+    .pss-hero-bg-wrapper {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+    
+    .pss-hero-bg-primary {
+        position: absolute;
+        inset: 0;
+        /* Fallback gradient - background image will be set via inline style */
+        background: linear-gradient(135deg, #2C5F72 0%, #4A90A4 30%, #6B8C9B 70%, #2C5F72 100%);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    
+    .pss-hero-bg-overlay {
+        position: absolute;
+        inset: 0;
+        /* Subtle texture overlay */
+        background: linear-gradient(45deg, rgba(32, 61, 10, 0.3) 0%, transparent 60%);
+        background-size: cover;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+    
+    /* Main Content Container */
+    .pss-hero-content {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--hero-padding);
+        display: flex;
+        align-items: center;  /* Center vertically */
+        justify-content: center;
+    }
+    
+    /* Decorative Plank */
+    .pss-hero-plank {
+        position: absolute;
+        top: clamp(80px, 15vh, 150px);  /* Responsive positioning */
+        left: -14%;
+        width: 65%;
+        height: auto;
+        z-index: 5;
+        pointer-events: none;
+    }
+    
+    /* Brush Background behind truck */
+    .pss-hero-brush {
+        position: absolute;
+        bottom: 0%;
+        left: -5%;
+        width: 80%;
+        height: 70%;
+        z-index: 7;
+        pointer-events: none;
+        background-size: cover;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+    }
+
+    /* Truck/Vehicle Image - Positioned to be visible */
+    .pss-hero-truck {
+        position: absolute;
+        bottom: 5%;  /* Percentage-based for better responsiveness */
+        left: -5%;   /* Closer to ensure visibility */
+        z-index: 8;
+        pointer-events: none;
+    }
+    
+    .pss-hero-truck img {
+        width: clamp(400px, 50vw, 700px);  /* Responsive sizing */
+        height: auto;
+        filter: drop-shadow(10px 20px 10px rgba(0,0,0,0.6));
+    }
+    
+    /* Main Content Grid - Two Columns */
+    .pss-hero-main {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
+        z-index: 15;
+        width: 100%;
+        position: relative;
+    }
+    
+    /* Left Column - Headline */
+    .pss-hero-left {
+        flex: 1 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-right: 20px;
+        margin-top: clamp(60px, 10vh, 110px);  /* Responsive margin for plank alignment */
+    }
+    
+    /* Right Column - Form and Badge */
+    .pss-hero-right {
+        flex: 1 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        max-width: 500px;
+    }
+    
+    /* Headline Styling */
+    .pss-hero-headline h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        font-weight: 900;
+        line-height: 1.12;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--hero-white);
+        margin: 0;
+        filter: drop-shadow(2px 2px 1px #203D0A) 
+                drop-shadow(-2px -2px 1px #203D0A) 
+                drop-shadow(-2px 2px 1px #203D0A) 
+                drop-shadow(2px -2px 1px #203D0A);
+    }
+    
+    .pss-hero-headline h1 span {
+        color: var(--hero-yellow);
+    }
+    
+    /* Form Container */
+    .pss-hero-form-container {
+        background-color: var(--hero-green);
+        border: 1px solid rgba(255, 217, 6, 0.3);
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .pss-hero-form-container h2 {
+        color: var(--hero-white);
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .pss-hero-divider {
+        width: 250px;
+        height: 2px;
+        background-color: var(--hero-yellow);
+        margin: 10px 0;
+    }
+    
+    /* Form Wrapper */
+    .pss-hero-form {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    /* Google Review Badge */
+    .pss-hero-badge-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;  /* Reduced margin */
+        position: relative;
+        z-index: 10;
+    }
+    
+    .pss-hero-badge {
+        width: 200px;
+        height: 200px;
+        min-height: 200px;
+        background-color: rgba(32, 61, 10, 0.87);
+        border: 1px solid rgba(255, 217, 6, 0.3);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .pss-hero-badge:hover {
+        transform: scale(1.05);
+    }
+    
+    .pss-hero-google-icon {
+        width: 60px;
+        height: 60px;
+        margin-top: -10px;
+    }
+    
+    .pss-hero-google-icon path {
+        fill: var(--hero-white);  /* White color for icon */
+    }
+    
+    .pss-hero-stars {
+        color: var(--hero-yellow);
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+    
+    .pss-hero-badge-text {
+        color: var(--hero-white);
+        text-align: center;
+    }
+    
+    .pss-hero-badge-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: var(--hero-white);
+    }
+    
+    .pss-hero-badge-subtitle {
+        font-size: 0.9rem;
+        color: var(--hero-yellow);
+    }
+    
+    /* Remove raccoon character - not visible in screenshot */
+    /* Focus on truck image instead */
+    
+    /* ===== WHY CHOOSE SECTION STYLES ===== */
+    .pss-why-choose-section {
+        background: white;
+        padding: 80px 20px;
+    }
+    
+    .pss-why-choose-section .pss-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    /* Badge Images Container */
+    .pss-badges-container {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .pss-badge {
+        flex: 0 0 auto;
+    }
+    
+    .pss-badge img {
+        width: 180px;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    /* Main Heading */
+    .pss-why-choose-heading {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        color: #203D0A;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        line-height: 1.2;
+    }
+    
+    /* Features Row */
+    .pss-features-row {
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .pss-feature {
+        flex: 0 1 auto;
+        text-align: center;
+    }
+    
+    .pss-feature h3 {
+        color: #6EC207;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+    }
+    
+    /* Statistics Container */
+    .pss-stats-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .pss-stat-card {
+        background: #F5F5F5;
+        border-radius: 12px;
+        padding: 30px 40px;
+        text-align: center;
+        flex: 0 1 280px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    
+    .pss-stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #6EC207;
+        margin-bottom: 10px;
+    }
+    
+    .pss-stat-label {
+        font-size: 1rem;
+        color: #333;
+        font-weight: 500;
+    }
+    
+    /* Local Experts */
+    .pss-local-experts {
+        text-align: center;
+    }
+    
+    .pss-local-experts h3 {
+        font-size: 2rem;
+        color: #6EC207;
+        margin: 0 0 10px 0;
+        font-weight: 600;
+    }
+    
+    .pss-local-experts p {
+        font-size: 1.2rem;
+        color: #333;
+        margin: 0;
+    }
+    
+    /* Why Choose Section Responsive */
+    @media (max-width: 768px) {
+        .pss-badges-container {
+            gap: 30px;
+        }
+        
+        .pss-badge img {
+            width: 140px;
+        }
+        
+        .pss-features-row {
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .pss-feature h3 {
+            font-size: 1.2rem;
+        }
+        
+        .pss-stats-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .pss-stat-card {
+            width: 100%;
+            max-width: 350px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .pss-why-choose-section {
+            padding: 60px 15px;
+        }
+        
+        .pss-badge img {
+            width: 100px;
+        }
+        
+        .pss-why-choose-heading {
+            font-size: 1.8rem;
+        }
+        
+        .pss-stat-number {
+            font-size: 2rem;
+        }
+    }
+    /* ===== END WHY CHOOSE SECTION ===== */
+    
+    /* Responsive Design - Comprehensive Solution */
+    @media (max-width: 1119px) {
+        .pss-hero-plank {
+            width: 80%;
+            left: -30%;
+        }
+        
+        .pss-hero-truck {
+            bottom: 3%;  /* Keep visible */
+            left: -8%;
+        }
+        
+        .pss-hero-truck img {
+            width: clamp(350px, 45vw, 600px);
+        }
+    }
+    
+    @media (max-width: 1023px) {
+        .pss-hero-left,
+        .pss-hero-right {
+            flex: 0 0 100%;
+        }
+        
+        .pss-hero-left {
+            margin-top: 40px;  /* Less margin on tablet */
+        }
+        
+        .pss-hero-section {
+            --hero-min-height: auto;
+            min-height: 100vh;
+        }
+        
+        .pss-hero-plank {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        
+        .pss-hero-bg-overlay {
+            background-size: 200vw auto;
+        }
+        
+        .pss-hero-headline h1 {
+            text-align: center;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+        }
+        
+        .pss-hero-truck {
+            position: absolute;
+            left: -15%;
+            bottom: 50px;
+        }
+        
+        .pss-hero-truck img {
+            width: 600px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .pss-hero-bg-primary {
+            background-position: 64% center;
+        }
+        
+        .pss-hero-plank {
+            top: 125px;
+        }
+        
+        .pss-hero-headline h1 {
+            font-size: clamp(1.2rem, 5vw, 1.8rem);
+        }
+        
+        .pss-hero-form-container {
+            padding: 15px;
+        }
+        
+        .pss-hero-divider {
+            width: 100%;
+            max-width: 200px;
+        }
+    }
+    
+    @media (max-width: 479px) {
+        .pss-hero-section {
+            padding-top: 120px;
+        }
+        
+        .pss-hero-bg-overlay {
+            background-size: 250vw auto;
+        }
+        
+        .pss-hero-plank {
+            left: -25%;
+            min-width: 600px;
+        }
+        
+        .pss-hero-headline h1 {
+            font-size: 6.7vw;
+        }
+        
+        .pss-hero-truck img {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 </style>
 
 <div class="pss-wrapper">
     <div class="pss-scroll-container" id="pss-container">
         
+        <!-- Hero Section -->
+        <section id="pss-hero" class="pss-snap-section pss-hero-section">
+            <!-- Background Layers -->
+            <div class="pss-hero-bg-wrapper">
+                <div class="pss-hero-bg-primary" style="background-image: url('<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/hero/cityscape-darker.webp'; ?>');"></div>
+                <div class="pss-hero-bg-overlay"></div>
+            </div>
+            
+            <!-- Decorative Plank -->
+            <img class="pss-hero-plank" 
+                 src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/hero/plank-but-smaller.webp'; ?>" 
+                 alt="Decorative wooden plank"
+                 loading="lazy">
+            
+            <!-- Main Content Container -->
+            <div class="pss-hero-content">
+                <div class="pss-hero-main">
+                    <!-- Left Column - Headline -->
+                    <div class="pss-hero-left">
+                        <div class="pss-hero-headline">
+                            <h1>Expert <span>Wildlife Removal</span> & <span>Animal Control Services</span><br> in SC & NC</h1>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column - Form and Badge -->
+                    <div class="pss-hero-right">
+                        <!-- Form Container -->
+                        <div class="pss-hero-form-container">
+                            <h2>Request A Free Consultation</h2>
+                            <div class="pss-hero-divider"></div>
+                            <div class="pss-hero-form">
+                                <?php 
+                                // Check if Fluent Forms is active and shortcode exists
+                                if (shortcode_exists('fluentform')) {
+                                    echo do_shortcode('[fluentform id="5"]');
+                                } else {
+                                    // Fallback form
+                                    ?>
+                                    <form class="pss-fallback-form" action="#" method="post">
+                                        <div class="pss-form-step">
+                                            <div class="pss-step-header">
+                                                <span>Step 1 of 3 -</span>
+                                                <div class="pss-progress-bar">
+                                                    <div class="pss-progress-fill" style="width: 33%;"></div>
+                                                </div>
+                                            </div>
+                                            <p><strong>Contact Information</strong></p>
+                                            <div class="pss-form-row">
+                                                <input type="text" name="first_name" placeholder="First Name" required>
+                                                <input type="text" name="last_name" placeholder="Last Name" required>
+                                            </div>
+                                            <div class="pss-form-row">
+                                                <input type="email" name="email" placeholder="Email Address" required>
+                                                <input type="tel" name="phone" placeholder="Phone" required>
+                                            </div>
+                                            <button type="button" class="pss-btn-next">Next</button>
+                                        </div>
+                                    </form>
+                                    <style>
+                                        .pss-fallback-form {
+                                            width: 100%;
+                                        }
+                                        .pss-form-step {
+                                            display: flex;
+                                            flex-direction: column;
+                                            gap: 15px;
+                                        }
+                                        .pss-step-header {
+                                            color: white;
+                                            font-size: 14px;
+                                            margin-bottom: 10px;
+                                        }
+                                        .pss-progress-bar {
+                                            height: 8px;
+                                            background: rgba(255,255,255,0.2);
+                                            border-radius: 4px;
+                                            margin-top: 8px;
+                                        }
+                                        .pss-progress-fill {
+                                            height: 100%;
+                                            background: #6EC207;
+                                            border-radius: 4px;
+                                        }
+                                        .pss-form-row {
+                                            display: flex;
+                                            gap: 10px;
+                                        }
+                                        .pss-fallback-form input {
+                                            flex: 1;
+                                            padding: 12px;
+                                            border: none;
+                                            border-bottom: 2px solid var(--hero-yellow);
+                                            background: rgba(255,255,255,0.1);
+                                            color: white;
+                                            font-size: 16px;
+                                        }
+                                        .pss-fallback-form input::placeholder {
+                                            color: rgba(255,255,255,0.7);
+                                        }
+                                        .pss-btn-next {
+                                            align-self: flex-end;
+                                            padding: 10px 30px;
+                                            background: #6EC207;
+                                            color: white;
+                                            border: none;
+                                            border-radius: 4px;
+                                            font-size: 16px;
+                                            font-weight: bold;
+                                            cursor: pointer;
+                                            transition: opacity 0.3s;
+                                        }
+                                        .pss-btn-next:hover {
+                                            opacity: 0.9;
+                                        }
+                                    </style>
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                        </div>
+                        
+                        <!-- Google Review Badge -->
+                        <div class="pss-hero-badge-container">
+                            <a href="https://g.co/kgs/DwhpN7n" target="_blank" class="pss-hero-badge">
+                                <svg class="pss-hero-google-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                    <path d="M16.319 13.713v5.487h9.075c-0.369 2.356-2.744 6.9-9.075 6.9-5.463 0-9.919-4.525-9.919-10.1s4.456-10.1 9.919-10.1c3.106 0 5.188 1.325 6.375 2.469l4.344-4.181c-2.788-2.612-6.4-4.188-10.719-4.188-8.844 0-16 7.156-16 16s7.156 16 16 16c9.231 0 15.363-6.494 15.363-15.631 0-1.050-0.113-1.85-0.25-2.65l-15.113-0.006z" fill="currentColor"></path>
+                                </svg>
+                                <div class="pss-hero-stars">★★★★★</div>
+                                <div class="pss-hero-badge-text">
+                                    <div class="pss-hero-badge-title">5 Star Rating</div>
+                                    <div class="pss-hero-badge-subtitle">Over 90 Reviews</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Brush Background behind truck -->
+            <div class="pss-hero-brush" style="background-image: url('<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/hero/brushbg-alt-small-scaled-1.webp'; ?>');"></div>
+            
+            <!-- Truck Image - Absolutely Positioned -->
+            <div class="pss-hero-truck">
+                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/hero/truck-edit.webp'; ?>" 
+                     alt="Palmetto Wildlife Extractors Truck"
+                     loading="lazy">
+            </div>
+        </section>
+        
         <!-- Section 1: Why Choose -->
-        <section id="pss-why-choose" class="pss-snap-section">
+        <section id="pss-why-choose" class="pss-snap-section pss-why-choose-section">
             <div class="pss-content">
-                <h2>Why Choose Palmetto Wildlife Extractors?</h2>
-                <p>With over 30 years of combined experience and a commitment to humane wildlife management, we're your trusted partner in wildlife control throughout South Carolina and North Carolina.</p>
+                <!-- Badge Images -->
+                <div class="pss-badges-container">
+                    <div class="pss-badge">
+                        <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/badges/module-wildlife-prevention.webp'; ?>" 
+                             alt="Wildlife Prevention" 
+                             loading="lazy">
+                    </div>
+                    <div class="pss-badge">
+                        <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/badges/module-wildlife-removal.webp'; ?>" 
+                             alt="Wildlife Removal" 
+                             loading="lazy">
+                    </div>
+                    <div class="pss-badge">
+                        <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/badges/module-wildlife-remediation.webp'; ?>" 
+                             alt="Wildlife Remediation" 
+                             loading="lazy">
+                    </div>
+                </div>
                 
-                <div class="pss-grid pss-grid-3">
-                    <div class="pss-card">
-                        <h3>🛡️ Wildlife Prevention</h3>
-                        <p>Proactive measures to keep wildlife from entering your property</p>
+                <!-- Main Heading -->
+                <h2 class="pss-why-choose-heading">Why Choose Palmetto Wildlife Extractors?</h2>
+                
+                <!-- Two Column Features -->
+                <div class="pss-features-row">
+                    <div class="pss-feature">
+                        <h3>Licensed, Certified, & Insured Professionals</h3>
                     </div>
-                    <div class="pss-card">
-                        <h3>🏠 Wildlife Removal</h3>
-                        <p>Safe and humane extraction of unwanted wildlife</p>
+                    <div class="pss-feature">
+                        <h3>Eco-Friendly & Humane Practices</h3>
                     </div>
-                    <div class="pss-card">
-                        <h3>🔧 Wildlife Remediation</h3>
-                        <p>Complete cleanup and repair of wildlife damage</p>
+                </div>
+                
+                <!-- Statistics Cards -->
+                <div class="pss-stats-container">
+                    <div class="pss-stat-card">
+                        <div class="pss-stat-number">10,000+</div>
+                        <div class="pss-stat-label">Satisfied Customers</div>
                     </div>
+                    <div class="pss-stat-card">
+                        <div class="pss-stat-number">30+</div>
+                        <div class="pss-stat-label">Years of Combined Experience</div>
+                    </div>
+                    <div class="pss-stat-card">
+                        <div class="pss-stat-number">24/7</div>
+                        <div class="pss-stat-label">Emergency Wildlife Removal Services</div>
+                    </div>
+                </div>
+                
+                <!-- Local Experts -->
+                <div class="pss-local-experts">
+                    <h3>Local Experts</h3>
+                    <p>in South Carolina & North Carolina</p>
                 </div>
             </div>
         </section>
         
-        <!-- Section 2: Services -->
-        <section id="pss-services" class="pss-snap-section">
-            <div class="pss-content">
-                <h2>Our Services</h2>
-                <p>Comprehensive wildlife control solutions for every situation</p>
+        <!-- Section 2: Trust Badges -->
+        <section id="pss-services" class="pss-snap-section pss-trust-badges">
+            <!-- TrustIndex Widget Container -->
+            <div class="pss-trustindex-container">
+                <!-- TrustIndex widget placeholder - the script will populate this -->
+                <div id="ti-widget-container-cfc8cc643d5d833d873607bd747"></div>
+            </div>
+            
+            <!-- Trust Badges Container -->
+            <div class="pss-trust-container">
                 
-                <div class="pss-grid pss-grid-4">
-                    <div class="pss-service-item"><h4>🐿️ Squirrels</h4></div>
-                    <div class="pss-service-item"><h4>🦝 Raccoons</h4></div>
-                    <div class="pss-service-item"><h4>🦇 Bats</h4></div>
-                    <div class="pss-service-item"><h4>🐍 Snakes</h4></div>
-                    <div class="pss-service-item"><h4>🐀 Rodents</h4></div>
-                    <div class="pss-service-item"><h4>🦨 Skunks</h4></div>
-                    <div class="pss-service-item"><h4>🦫 Beavers</h4></div>
-                    <div class="pss-service-item"><h4>🐊 Alligators</h4></div>
-                </div>
+                <!-- Google Reviews Badge -->
+                <a href="https://g.co/kgs/DwhpN7n" target="_blank" class="pss-trust-badge google">
+                    <div class="pss-badge-icon">G</div>
+                    <div class="pss-badge-stars">
+                        <svg viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                        <svg viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                        <svg viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                        <svg viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                        <svg viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                    </div>
+                    <div class="pss-badge-title">5 Star Rating</div>
+                    <div class="pss-badge-subtitle">Over 90 Reviews</div>
+                </a>
+
+                <!-- BBB Badge -->
+                <a href="https://www.bbb.org/us/sc/columbia/profile/animal-trapping/palmetto-wildlife-extractors-0663-34103856" target="_blank" class="pss-trust-badge bbb">
+                    <div class="pss-bbb-logo">BBB</div>
+                    <div class="pss-bbb-text">Better Business<br>Bureau</div>
+                    <div class="pss-badge-subtitle">Accredited Business</div>
+                </a>
+
+                <!-- Facebook Reviews Badge -->
+                <a href="https://www.facebook.com/PalmettoWildlifeExtractor/" target="_blank" class="pss-trust-badge facebook">
+                    <div class="pss-badge-icon">f</div>
+                    <div class="pss-badge-stars">
+                        <svg viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                        <svg viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                        <svg viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                        <svg viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                        <svg viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                    </div>
+                    <div class="pss-badge-title">5 Star Rating</div>
+                    <div class="pss-badge-subtitle">Over 40 Reviews</div>
+                </a>
+                
             </div>
         </section>
         
-        <!-- Section 3: Wildlife Control -->
-        <section id="pss-wildlife-control" class="pss-snap-section">
-            <div class="pss-content">
-                <h2>Professional Wildlife Control</h2>
-                <p>We handle all types of wildlife situations with expertise and care. Our team is trained in the latest techniques for safe, effective, and humane wildlife management.</p>
-                
-                <div style="margin-top: 40px;">
-                    <p style="font-size: 1.3rem;">✓ Licensed and Insured</p>
-                    <p style="font-size: 1.3rem;">✓ 24/7 Emergency Service</p>
-                    <p style="font-size: 1.3rem;">✓ Humane Methods</p>
-                    <p style="font-size: 1.3rem;">✓ Guaranteed Results</p>
+        <!-- Section 3: Comprehensive Wildlife Removal Services -->
+        <section id="pss-wildlife-control" class="pss-snap-section pss-wildlife-section">
+            <!-- Header Section -->
+            <div class="pss-wildlife-header">
+                <h2>Comprehensive Wildlife Removal Services</h2>
+                <p>Our expert team provides <strong>safe, humane, and effective wildlife control solutions</strong> for homes and businesses. From identifying infestations to securing your property, we handle every step of the process.</p>
+                <a href="/wildlife-removal/" class="pss-btn-primary">View All Wildlife Removal Services</a>
+            </div>
+            
+            <!-- Carousel Section -->
+            <div class="pss-carousel-wrapper">
+                <!-- Carousel Container -->
+                <div class="pss-carousel-container">
+                    <div class="pss-carousel-track" id="wildlife-carousel-track">
+                        
+                        <!-- Squirrel Removal -->
+                        <a href="/wildlife-removal/squirrels/" class="pss-wildlife-card">
+                            <div class="pss-wildlife-card-image">
+                                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/animals/Squirrel-Isolated-Color-Corrected.webp'; ?>" 
+                                     alt="Squirrel Removal" loading="lazy">
+                            </div>
+                            <div class="pss-wildlife-card-content">
+                                <h3 class="pss-wildlife-card-title">Squirrel Removal</h3>
+                                <p class="pss-wildlife-card-description">Squirrels can cause serious damage by chewing through walls, insulation, and electrical wiring. Our humane squirrel removal services ensure safe removal and prevention.</p>
+                                <span class="pss-wildlife-card-link">Learn More</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Snake Removal -->
+                        <a href="/wildlife-removal/snakes/" class="pss-wildlife-card">
+                            <div class="pss-wildlife-card-image">
+                                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/animals/Snake-Isolated-Color-Corrected-scaled.webp'; ?>" 
+                                     alt="Snake Removal" loading="lazy">
+                            </div>
+                            <div class="pss-wildlife-card-content">
+                                <h3 class="pss-wildlife-card-title">Snake Removal</h3>
+                                <p class="pss-wildlife-card-description">Whether venomous or non-venomous, snakes can pose serious dangers. We provide professional snake identification and removal services to ensure your property is safe.</p>
+                                <span class="pss-wildlife-card-link">Learn More</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Raccoon Removal -->
+                        <a href="/wildlife-removal/raccoons/" class="pss-wildlife-card">
+                            <div class="pss-wildlife-card-image">
+                                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/animals/Raccoon-Isolated-Color-Corrected-scaled.webp'; ?>" 
+                                     alt="Raccoon Removal" loading="lazy">
+                            </div>
+                            <div class="pss-wildlife-card-content">
+                                <h3 class="pss-wildlife-card-title">Raccoon Removal</h3>
+                                <p class="pss-wildlife-card-description">Raccoons in attics and crawl spaces can cause extensive damage. Our experts safely remove raccoons and implement exclusion techniques to prevent re-entry.</p>
+                                <span class="pss-wildlife-card-link">Learn More</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Opossum Removal -->
+                        <a href="/wildlife-removal/opossums/" class="pss-wildlife-card">
+                            <div class="pss-wildlife-card-image">
+                                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/animals/Opossum-Isolated-Color-Corrected.webp'; ?>" 
+                                     alt="Opossum Removal" loading="lazy">
+                            </div>
+                            <div class="pss-wildlife-card-content">
+                                <h3 class="pss-wildlife-card-title">Opossum Removal</h3>
+                                <p class="pss-wildlife-card-description">Opossums often seek shelter in attics, sheds, and under porches. We humanely trap and relocate these animals while securing entry points.</p>
+                                <span class="pss-wildlife-card-link">Learn More</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Bat Removal (Note: No bat image available, using placeholder) -->
+                        <a href="/wildlife-removal/bats/" class="pss-wildlife-card">
+                            <div class="pss-wildlife-card-image">
+                                <!-- Bat image placeholder - no bat image in assets -->
+                                <div style="font-size: 3rem; color: #6c757d;">🦇</div>
+                            </div>
+                            <div class="pss-wildlife-card-content">
+                                <h3 class="pss-wildlife-card-title">Bat Removal</h3>
+                                <p class="pss-wildlife-card-description">Bats in your home pose health risks. Our bat exclusion services safely remove colonies and prevent re-entry while complying with wildlife protection laws.</p>
+                                <span class="pss-wildlife-card-link">Learn More</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Rat/Rodent Removal -->
+                        <a href="/wildlife-removal/rats/" class="pss-wildlife-card">
+                            <div class="pss-wildlife-card-image">
+                                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/animals/Rat-Isolated-Color-Corrected-scaled.webp'; ?>" 
+                                     alt="Rat Removal" loading="lazy">
+                            </div>
+                            <div class="pss-wildlife-card-content">
+                                <h3 class="pss-wildlife-card-title">Rat & Rodent Removal</h3>
+                                <p class="pss-wildlife-card-description">Rats and mice can spread diseases and cause property damage. Our comprehensive rodent control includes removal, exclusion, and prevention strategies.</p>
+                                <span class="pss-wildlife-card-link">Learn More</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Skunk Removal -->
+                        <a href="/wildlife-removal/skunks/" class="pss-wildlife-card">
+                            <div class="pss-wildlife-card-image">
+                                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/animals/Skunk-Isolated-Color-Corrected-scaled.webp'; ?>" 
+                                     alt="Skunk Removal" loading="lazy">
+                            </div>
+                            <div class="pss-wildlife-card-content">
+                                <h3 class="pss-wildlife-card-title">Skunk Removal</h3>
+                                <p class="pss-wildlife-card-description">Skunks under structures pose odor and disease risks. We safely trap and remove skunks while implementing exclusion methods to prevent future problems.</p>
+                                <span class="pss-wildlife-card-link">Learn More</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Beaver Removal -->
+                        <a href="/wildlife-removal/beavers/" class="pss-wildlife-card">
+                            <div class="pss-wildlife-card-image">
+                                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/animals/Beaver-Isolated-Color-Corrected-scaled.webp'; ?>" 
+                                     alt="Beaver Removal" loading="lazy">
+                            </div>
+                            <div class="pss-wildlife-card-content">
+                                <h3 class="pss-wildlife-card-title">Beaver Removal</h3>
+                                <p class="pss-wildlife-card-description">Beavers can cause flooding and property damage. Our beaver management services include dam removal and population control to protect your property.</p>
+                                <span class="pss-wildlife-card-link">Learn More</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Pigeon/Bird Removal -->
+                        <a href="/wildlife-removal/birds/" class="pss-wildlife-card">
+                            <div class="pss-wildlife-card-image">
+                                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/animals/Pigeon-Isolated-Color-Corrected.webp'; ?>" 
+                                     alt="Bird Removal" loading="lazy">
+                            </div>
+                            <div class="pss-wildlife-card-content">
+                                <h3 class="pss-wildlife-card-title">Bird & Pigeon Control</h3>
+                                <p class="pss-wildlife-card-description">Birds nesting in buildings create health hazards. We provide humane bird removal and deterrent installation to keep your property bird-free.</p>
+                                <span class="pss-wildlife-card-link">Learn More</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Mole Removal -->
+                        <a href="/wildlife-removal/moles/" class="pss-wildlife-card">
+                            <div class="pss-wildlife-card-image">
+                                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/animals/Mole-Isolated-Color-Corrected.webp'; ?>" 
+                                     alt="Mole Removal" loading="lazy">
+                            </div>
+                            <div class="pss-wildlife-card-content">
+                                <h3 class="pss-wildlife-card-title">Mole Removal</h3>
+                                <p class="pss-wildlife-card-description">Moles destroy lawns and gardens with their tunneling. Our mole control services eliminate current populations and prevent future lawn damage.</p>
+                                <span class="pss-wildlife-card-link">Learn More</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Coyote Removal -->
+                        <a href="/wildlife-removal/coyotes/" class="pss-wildlife-card">
+                            <div class="pss-wildlife-card-image">
+                                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/animals/Coyote-Isolated-Color-Corrected-scaled.webp'; ?>" 
+                                     alt="Coyote Removal" loading="lazy">
+                            </div>
+                            <div class="pss-wildlife-card-content">
+                                <h3 class="pss-wildlife-card-title">Coyote Removal</h3>
+                                <p class="pss-wildlife-card-description">Coyotes near residential areas pose risks to pets and people. Our coyote management includes deterrence, hazing, and safe removal when necessary.</p>
+                                <span class="pss-wildlife-card-link">Learn More</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Feral Hog Removal -->
+                        <a href="/wildlife-removal/feral-hogs/" class="pss-wildlife-card">
+                            <div class="pss-wildlife-card-image">
+                                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/animals/Feral-Hog-Isolated-Color-Corrected.webp'; ?>" 
+                                     alt="Feral Hog Removal" loading="lazy">
+                            </div>
+                            <div class="pss-wildlife-card-content">
+                                <h3 class="pss-wildlife-card-title">Feral Hog Removal</h3>
+                                <p class="pss-wildlife-card-description">Feral hogs cause extensive property and crop damage. Our hog control services include trapping and removal to protect your land and livelihood.</p>
+                                <span class="pss-wildlife-card-link">Learn More</span>
+                            </div>
+                        </a>
+                        
+                    </div>
                 </div>
+                
+                <!-- Pagination Dots -->
+                <div class="pss-carousel-dots" id="wildlife-carousel-dots"></div>
             </div>
         </section>
         
@@ -579,6 +1868,230 @@ if (!defined('ABSPATH')) {
         document.addEventListener('DOMContentLoaded', initFinalScroll);
     } else {
         setTimeout(initFinalScroll, 100);
+    }
+})();
+</script>
+
+<!-- TrustIndex Widget Script -->
+<script>
+(function() {
+    // Load TrustIndex widget script
+    var script = document.createElement('script');
+    script.src = 'https://cdn.trustindex.io/loader.js?cfc8cc643d5d833d873607bd747';
+    script.defer = true;
+    script.async = true;
+    
+    // Add error handling
+    script.onerror = function() {
+        console.error('[PSS] Failed to load TrustIndex widget');
+    };
+    
+    script.onload = function() {
+        console.log('[PSS] TrustIndex widget loaded');
+    };
+    
+    document.head.appendChild(script);
+})();
+</script>
+
+<!-- Wildlife Carousel JavaScript -->
+<script>
+(function() {
+    'use strict';
+    
+    // Wildlife Carousel Implementation
+    function initWildlifeCarousel() {
+        const track = document.getElementById('wildlife-carousel-track');
+        const dotsContainer = document.getElementById('wildlife-carousel-dots');
+        
+        if (!track || !dotsContainer) return;
+        
+        const cards = track.querySelectorAll('.pss-wildlife-card');
+        
+        let currentIndex = 0;
+        let cardsPerView = 3;
+        let autoPlayInterval;
+        let isHovering = false;
+        
+        // Calculate cards per view based on viewport
+        function calculateCardsPerView() {
+            const width = window.innerWidth;
+            if (width <= 768) {
+                cardsPerView = 1;
+            } else if (width <= 1024) {
+                cardsPerView = 2;
+            } else {
+                cardsPerView = 3;
+            }
+        }
+        
+        // Create pagination dots
+        function createDots() {
+            dotsContainer.innerHTML = '';
+            const totalDots = Math.ceil(cards.length / cardsPerView);
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'pss-carousel-dot';
+                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                if (i === 0) dot.classList.add('active');
+                
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Update carousel position
+        function updateCarousel() {
+            const cardWidth = 100 / cardsPerView;
+            const offset = -currentIndex * cardWidth;
+            track.style.transform = `translateX(${offset}%)`;
+            
+            // Update dots
+            const dots = dotsContainer.querySelectorAll('.pss-carousel-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === Math.floor(currentIndex / cardsPerView));
+            });
+            
+        }
+        
+        // Go to specific slide
+        function goToSlide(dotIndex) {
+            currentIndex = dotIndex * cardsPerView;
+            if (currentIndex > cards.length - cardsPerView) {
+                currentIndex = cards.length - cardsPerView;
+            }
+            updateCarousel();
+        }
+        
+        // Next slide
+        function nextSlide() {
+            if (currentIndex < cards.length - cardsPerView) {
+                currentIndex += cardsPerView;
+                if (currentIndex > cards.length - cardsPerView) {
+                    currentIndex = cards.length - cardsPerView;
+                }
+            } else {
+                // Loop back to start
+                currentIndex = 0;
+            }
+            updateCarousel();
+        }
+        
+        // Previous slide
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex -= cardsPerView;
+                if (currentIndex < 0) currentIndex = 0;
+            } else {
+                // Loop to end
+                currentIndex = Math.max(0, cards.length - cardsPerView);
+            }
+            updateCarousel();
+        }
+        
+        // Auto-play functionality
+        function startAutoPlay() {
+            if (!isHovering) {
+                autoPlayInterval = setInterval(nextSlide, 5000);
+            }
+        }
+        
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+        
+        // Touch/Swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        function handleTouchStart(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }
+        
+        function handleTouchEnd(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        }
+        
+        // Touch events
+        track.addEventListener('touchstart', handleTouchStart, { passive: true });
+        track.addEventListener('touchend', handleTouchEnd, { passive: true });
+        
+        // Hover pause
+        const carouselWrapper = document.querySelector('.pss-carousel-wrapper');
+        carouselWrapper.addEventListener('mouseenter', () => {
+            isHovering = true;
+            stopAutoPlay();
+        });
+        
+        carouselWrapper.addEventListener('mouseleave', () => {
+            isHovering = false;
+            startAutoPlay();
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            // Only work if carousel is in viewport
+            const rect = carouselWrapper.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            
+            if (isVisible) {
+                if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                    stopAutoPlay();
+                    startAutoPlay();
+                } else if (e.key === 'ArrowRight') {
+                    nextSlide();
+                    stopAutoPlay();
+                    startAutoPlay();
+                }
+            }
+        });
+        
+        // Responsive handling
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                const oldCardsPerView = cardsPerView;
+                calculateCardsPerView();
+                
+                if (oldCardsPerView !== cardsPerView) {
+                    currentIndex = 0;
+                    createDots();
+                    updateCarousel();
+                }
+            }, 250);
+        });
+        
+        // Initialize
+        calculateCardsPerView();
+        createDots();
+        updateCarousel();
+        startAutoPlay();
+        
+        console.log('[PSS] Wildlife carousel initialized');
+    }
+    
+    // Initialize on DOM ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initWildlifeCarousel);
+    } else {
+        setTimeout(initWildlifeCarousel, 100);
     }
 })();
 </script>
