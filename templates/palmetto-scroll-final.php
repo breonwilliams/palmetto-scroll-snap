@@ -12,6 +12,232 @@ if (!defined('ABSPATH')) {
 
 <!-- Palmetto Scroll Snap Final -->
 <style>
+    /* ================================================
+       DESIGN SYSTEM - 2025 Modern Standards
+       ================================================ */
+    
+    :root {
+        /* === Color System === */
+        /* Primary Green Palette */
+        --color-primary-dark: #1d3a0f;
+        --color-primary: #2d5016;
+        --color-primary-light: #4a6b2a;
+        --color-primary-accent: #6ab04c;
+        --color-primary-tint: #e8f5e9;
+        
+        /* Secondary Orange Palette */
+        --color-secondary: #ff6b35;
+        --color-secondary-hover: #ff5722;
+        --color-secondary-light: #ff8a65;
+        --color-secondary-tint: #fff3e0;
+        
+        /* Neutral Colors */
+        --color-text-primary: #1a1a1a;
+        --color-text-secondary: #4a4a4a;
+        --color-text-muted: #6c757d;
+        --color-border: #e0e0e0;
+        --color-border-light: #f0f0f0;
+        --color-bg-light: #f8f9fa;
+        --color-bg-white: #ffffff;
+        
+        /* Semantic Colors */
+        --color-success: #6ab04c;
+        --color-success-dark: #5a9b3d;
+        --color-info: #4a90e2;
+        --color-warning: #ffc107;
+        --color-error: #dc3545;
+        
+        /* === Typography System (1.25 Scale) === */
+        --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-family-heading: "Montserrat", var(--font-family-base);
+        
+        /* Font Sizes */
+        --font-size-xs: 0.8rem;      /* 12.8px */
+        --font-size-sm: 0.875rem;    /* 14px */
+        --font-size-base: 1rem;      /* 16px */
+        --font-size-md: 1.125rem;    /* 18px */
+        --font-size-lg: 1.25rem;     /* 20px */
+        --font-size-xl: 1.563rem;    /* 25px */
+        --font-size-2xl: 1.953rem;   /* 31.2px */
+        --font-size-3xl: 2.441rem;   /* 39px */
+        --font-size-4xl: 3.052rem;   /* 48.8px */
+        
+        /* Line Heights */
+        --line-height-tight: 1.2;
+        --line-height-snug: 1.375;
+        --line-height-base: 1.5;
+        --line-height-relaxed: 1.625;
+        --line-height-loose: 1.75;
+        
+        /* Font Weights */
+        --font-weight-normal: 400;
+        --font-weight-medium: 500;
+        --font-weight-semibold: 600;
+        --font-weight-bold: 700;
+        
+        /* === Spacing System (8px Grid) === */
+        --space-0: 0;
+        --space-xs: 0.5rem;   /* 8px */
+        --space-sm: 1rem;     /* 16px */
+        --space-md: 1.5rem;   /* 24px */
+        --space-lg: 2rem;     /* 32px */
+        --space-xl: 3rem;     /* 48px */
+        --space-2xl: 4rem;    /* 64px */
+        --space-3xl: 6rem;    /* 96px */
+        --space-4xl: 8rem;    /* 128px */
+        
+        /* === Layout === */
+        --container-max-width: 1280px;
+        --container-padding: var(--space-md);
+        --section-padding-y: var(--space-2xl);
+        --section-padding-y-mobile: var(--space-xl);
+        
+        /* === Border Radius === */
+        --radius-sm: 4px;
+        --radius-base: 8px;
+        --radius-md: 12px;
+        --radius-lg: 16px;
+        --radius-xl: 24px;
+        --radius-full: 9999px;
+        
+        /* === Shadows (Elevation System) === */
+        --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+        --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+        --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.15);
+        --shadow-2xl: 0 16px 48px rgba(0, 0, 0, 0.18);
+        
+        /* === Transitions === */
+        --transition-fast: 150ms ease-out;
+        --transition-base: 250ms ease-out;
+        --transition-slow: 350ms ease-out;
+        --transition-slower: 500ms ease-out;
+        --transition-button: 400ms ease-in-out;
+        
+        /* === Button System === */
+        --button-padding-y: 1rem;
+        --button-padding-x: 1.5rem;
+        --button-font-size: 0.9375rem;
+        --button-font-weight: 700;
+        --button-line-height: 1.07;
+        --button-border-radius: 6px;
+        --button-primary-bg: #ff7000;
+        --button-primary-hover-bg: #e56000;
+        --button-secondary-bg: transparent;
+        --button-secondary-border: 2px solid currentColor;
+        
+        /* Easing Functions */
+        --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+        --ease-out: cubic-bezier(0, 0, 0.2, 1);
+        --ease-in: cubic-bezier(0.4, 0, 1, 1);
+        
+        /* === Z-Index Scale === */
+        --z-dropdown: 1000;
+        --z-sticky: 1020;
+        --z-fixed: 1030;
+        --z-modal-backdrop: 1040;
+        --z-modal: 1050;
+        --z-popover: 1060;
+        --z-tooltip: 1070;
+        
+        /* === Breakpoints === */
+        --breakpoint-sm: 640px;
+        --breakpoint-md: 768px;
+        --breakpoint-lg: 1024px;
+        --breakpoint-xl: 1280px;
+        --breakpoint-2xl: 1536px;
+    }
+    
+    /* === Global Design System Styles === */
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: var(--font-family-base);
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
+        color: var(--color-text-primary);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-family-heading);
+        line-height: var(--line-height-tight);
+        font-weight: var(--font-weight-bold);
+        margin-top: 0;
+        margin-bottom: var(--space-md);
+    }
+    
+    h1 { font-size: var(--font-size-4xl); }
+    h2 { font-size: var(--font-size-3xl); }
+    h3 { font-size: var(--font-size-2xl); }
+    h4 { font-size: var(--font-size-xl); }
+    
+    p {
+        margin-top: 0;
+        margin-bottom: var(--space-sm);
+        line-height: var(--line-height-relaxed);
+    }
+    
+    /* === Utility Classes === */
+    .container {
+        max-width: var(--container-max-width);
+        margin: 0 auto;
+        padding: 0 var(--container-padding);
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: var(--radius-base);
+        font-weight: var(--font-weight-semibold);
+        text-decoration: none;
+        transition: all var(--transition-fast);
+        cursor: pointer;
+        border: none;
+        font-size: var(--font-size-base);
+    }
+    
+    .btn-primary {
+        background: var(--color-secondary);
+        color: var(--color-bg-white);
+        box-shadow: var(--shadow-sm);
+    }
+    
+    .btn-primary:hover {
+        background: var(--color-secondary-hover);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .btn-secondary {
+        background: transparent;
+        color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+    }
+    
+    .btn-secondary:hover {
+        background: var(--color-primary);
+        color: var(--color-bg-white);
+    }
+    
+    /* === Card Component === */
+    .card {
+        background: var(--color-bg-white);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        padding: var(--space-md);
+        transition: all var(--transition-base);
+    }
+    
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    /* === End Design System === */
+    
     /* Override Breakdance container constraints ONLY for this plugin/page */
     body.pss-active .breakdance .bde-section .section-container,
     body.pss-active .bde-section .section-container,
@@ -87,45 +313,45 @@ if (!defined('ABSPATH')) {
     
     /* Section backgrounds - full width */
     #pss-why-choose { 
-        background: #f8f9fa; 
+        background: var(--color-bg-light); 
     }
     #pss-services { 
-        background: white; 
+        background: var(--color-bg-white); 
     }
     #pss-wildlife-control { 
-        background: white; 
-        color: #333; 
+        background: var(--color-bg-white); 
+        color: var(--color-text-primary); 
     }
     #pss-process { 
-        background: #f8f9fa; 
+        background: var(--color-bg-light); 
     }
     #pss-faqs { 
-        background: white; 
+        background: var(--color-bg-white); 
     }
     #pss-cta { 
-        background: linear-gradient(135deg, #1a7efb 0%, #0056b3 100%); 
-        color: white; 
+        background: linear-gradient(135deg, var(--color-info) 0%, #0056b3 100%); 
+        color: var(--color-bg-white); 
     }
     
     /* Content styling - centered within full-width sections */
     .pss-content {
-        max-width: 1200px;
+        max-width: var(--container-max-width);
         width: 100%;
         margin: 0 auto;
-        padding: 60px 20px;
+        padding: var(--section-padding-y) var(--container-padding);
         text-align: center;
     }
     
     .pss-snap-section h2 {
-        font-size: clamp(2rem, 4vw, 3rem);
-        margin-bottom: 1.5rem;
-        font-weight: 700;
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--space-md);
+        font-weight: var(--font-weight-bold);
     }
     
     .pss-snap-section p {
-        font-size: clamp(1rem, 2vw, 1.25rem);
-        line-height: 1.8;
-        margin-bottom: 2rem;
+        font-size: var(--font-size-lg);
+        line-height: var(--line-height-relaxed);
+        margin-bottom: var(--space-lg);
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
@@ -157,23 +383,23 @@ if (!defined('ABSPATH')) {
     /* Progress dots */
     .pss-progress {
         position: fixed;
-        right: 30px;
+        right: var(--space-lg);
         top: 50%;
         transform: translateY(-50%);
-        z-index: 10000;
+        z-index: var(--z-fixed);
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: var(--space-sm);
     }
     
     .pss-progress-dot {
         width: 14px;
         height: 14px;
-        border-radius: 50%;
+        border-radius: var(--radius-full);
         background: rgba(255, 255, 255, 0.3);
         border: 2px solid rgba(26, 126, 251, 0.8);
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all var(--transition-fast);
     }
     
     .pss-progress-dot:hover {
@@ -224,8 +450,8 @@ if (!defined('ABSPATH')) {
     
     /* Trust Badges Section - Third Section - Circular Design */
     .pss-trust-badges {
-        background: #f8f9fa;
-        padding: 80px 20px;
+        background: var(--color-bg-light);
+        padding: var(--section-padding-y) var(--container-padding);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -234,9 +460,9 @@ if (!defined('ABSPATH')) {
     
     .pss-trustindex-container {
         width: 100%;
-        max-width: 1200px;
-        margin: 0 auto 50px;
-        padding: 0 20px;
+        max-width: var(--container-max-width);
+        margin: 0 auto var(--space-xl);
+        padding: 0 var(--container-padding);
         display: block;
         clear: both;
         min-height: 100px; /* Reserve space for widget */
@@ -253,12 +479,12 @@ if (!defined('ABSPATH')) {
     }
     
     .pss-trust-container {
-        max-width: 1200px;
+        max-width: var(--container-max-width);
         margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: clamp(30px, 8vw, 80px);
+        gap: var(--space-xl);
         flex-wrap: wrap;
         width: 100%;
         clear: both;
@@ -267,18 +493,18 @@ if (!defined('ABSPATH')) {
     .pss-trust-badge {
         width: clamp(200px, 25vw, 280px);
         height: clamp(200px, 25vw, 280px);
-        border-radius: 50%;
+        border-radius: var(--radius-full);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
         text-decoration: none;
-        color: white;
+        color: var(--color-bg-white);
         position: relative;
-        transition: all 0.3s ease;
-        gap: clamp(8px, 2vw, 15px);
-        padding: 20px;
+        transition: all var(--transition-base);
+        gap: var(--space-sm);
+        padding: var(--space-md);
         box-sizing: border-box;
     }
     
@@ -326,18 +552,18 @@ if (!defined('ABSPATH')) {
     }
     
     .pss-badge-title {
-        font-size: clamp(1rem, 2.5vw, 1.4rem);
-        font-weight: bold;
-        color: white;
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-bg-white);
         margin: 0;
-        line-height: 1.2;
+        line-height: var(--line-height-tight);
     }
     
     .pss-badge-subtitle {
-        font-size: clamp(0.8rem, 2vw, 1rem);
+        font-size: var(--font-size-base);
         color: #90c695;
         margin: 0;
-        font-weight: 500;
+        font-weight: var(--font-weight-medium);
     }
     
     /* BBB specific styling */
@@ -363,8 +589,8 @@ if (!defined('ABSPATH')) {
 
     /* Wildlife Carousel Section Styles */
     .pss-wildlife-section {
-        background: white;
-        padding: 60px 0;
+        background: var(--color-bg-white);
+        padding: var(--section-padding-y) 0;
         position: relative;
         width: 100%;
         overflow: hidden;
@@ -373,23 +599,23 @@ if (!defined('ABSPATH')) {
     .pss-wildlife-header {
         text-align: center;
         max-width: 100%;
-        margin: 0 auto 50px;
-        padding: 0 20px;
+        margin: 0 auto var(--space-xl);
+        padding: 0 var(--container-padding);
     }
     
     .pss-wildlife-header h2 {
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
-        color: #2d5016;
-        margin-bottom: 20px;
-        font-weight: 700;
+        font-size: var(--font-size-3xl);
+        color: var(--color-primary);
+        margin-bottom: var(--space-md);
+        font-weight: var(--font-weight-bold);
         letter-spacing: -0.5px;
     }
     
     .pss-wildlife-header p {
-        font-size: clamp(1.1rem, 2vw, 1.3rem);
-        color: #5a5a5a;
-        line-height: 1.6;
-        margin-bottom: 35px;
+        font-size: var(--font-size-lg);
+        color: var(--color-text-secondary);
+        line-height: var(--line-height-relaxed);
+        margin-bottom: var(--space-lg);
     }
     
     .pss-wildlife-header p strong {
@@ -399,29 +625,29 @@ if (!defined('ABSPATH')) {
     
     .pss-wildlife-header .pss-btn-primary {
         display: inline-block;
-        background: #ff6b35;
-        color: white;
-        padding: 16px 35px;
-        border-radius: 50px;
+        background: var(--color-secondary);
+        color: var(--color-bg-white);
+        padding: var(--space-sm) var(--space-lg);
+        border-radius: var(--radius-full);
         text-decoration: none;
-        font-weight: 700;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-md);
+        transition: all var(--transition-base);
+        box-shadow: var(--shadow-md);
     }
     
     .pss-wildlife-header .pss-btn-primary:hover {
-        background: #ff5722;
+        background: var(--color-secondary-hover);
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        box-shadow: var(--shadow-lg);
     }
     
     /* Carousel Container */
     .pss-carousel-wrapper {
         position: relative;
-        max-width: 1200px;
+        max-width: var(--container-max-width);
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 var(--container-padding);
         width: 100%;
         box-sizing: border-box;
     }
@@ -435,20 +661,20 @@ if (!defined('ABSPATH')) {
     
     .pss-carousel-track {
         display: flex;
-        transition: transform 0.5s ease;
-        gap: 20px;
-        padding: 0 5px;
+        transition: transform var(--transition-slower);
+        gap: var(--space-md);
+        padding: 0 var(--space-xs);
     }
     
     /* Wildlife Cards */
     .pss-wildlife-card {
-        flex: 0 0 calc(33.333% - 14px);
+        flex: 0 0 calc(33.333% - 16px);
         min-width: 0;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        background: var(--color-bg-white);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
         overflow: hidden;
-        transition: all 0.3s ease;
+        transition: all var(--transition-base);
         text-decoration: none;
         color: inherit;
         display: flex;
@@ -457,19 +683,19 @@ if (!defined('ABSPATH')) {
     }
     
     .pss-wildlife-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
     }
     
     .pss-wildlife-card-image {
         width: 100%;
         height: 250px;
-        background: #f5f5f5;
+        background: var(--color-bg-light);
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        padding: 20px;
+        padding: var(--space-md);
     }
     
     .pss-wildlife-card-image img {
@@ -486,7 +712,7 @@ if (!defined('ABSPATH')) {
     }
     
     .pss-wildlife-card-content {
-        padding: 30px 25px;
+        padding: var(--space-lg) var(--space-md);
         text-align: center;
         flex-grow: 1;
         display: flex;
@@ -495,35 +721,35 @@ if (!defined('ABSPATH')) {
     }
     
     .pss-wildlife-card-title {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #2d5016;
-        margin-bottom: 15px;
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-primary);
+        margin-bottom: var(--space-sm);
         letter-spacing: -0.3px;
     }
     
     .pss-wildlife-card-description {
-        font-size: 0.95rem;
-        color: #5a5a5a;
-        line-height: 1.6;
-        margin-bottom: 25px;
+        font-size: var(--font-size-base);
+        color: var(--color-text-secondary);
+        line-height: var(--line-height-relaxed);
+        margin-bottom: var(--space-md);
         flex-grow: 1;
     }
     
     .pss-wildlife-card-link {
         display: inline-block;
-        color: #6ab04c;
-        font-weight: 700;
-        font-size: 1rem;
+        color: var(--color-primary-accent);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-base);
         text-decoration: none;
-        transition: all 0.3s ease;
-        padding: 10px 0;
+        transition: all var(--transition-fast);
+        padding: var(--space-sm) 0;
         border-bottom: 2px solid transparent;
     }
     
     .pss-wildlife-card-link:hover {
-        color: #5a9e3f;
-        border-bottom-color: #6ab04c;
+        color: var(--color-primary-light);
+        border-bottom-color: var(--color-primary-accent);
     }
     
     /* Pagination Dots */
@@ -531,23 +757,23 @@ if (!defined('ABSPATH')) {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 8px;
-        margin-top: 35px;
+        gap: var(--space-xs);
+        margin-top: var(--space-lg);
     }
     
     .pss-carousel-dot {
         width: 8px;
         height: 8px;
-        border-radius: 50%;
+        border-radius: var(--radius-full);
         background: #c8d6e5;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all var(--transition-fast);
         border: none;
         padding: 0;
     }
     
     .pss-carousel-dot.active {
-        background: #4a90e2;
+        background: var(--color-info);
         width: 10px;
         height: 10px;
     }
@@ -587,7 +813,7 @@ if (!defined('ABSPATH')) {
         .pss-snap-section {
             min-height: auto;
             scroll-snap-align: none;
-            padding: 60px 20px;
+            padding: var(--space-3xl) var(--space-lg);
         }
         
         .pss-progress {
@@ -600,7 +826,7 @@ if (!defined('ABSPATH')) {
         
         .pss-trust-container {
             flex-direction: column;
-            gap: 30px;
+            gap: var(--space-xl);
         }
         
         .pss-trust-badge {
@@ -610,25 +836,25 @@ if (!defined('ABSPATH')) {
         
         /* Wildlife Carousel Mobile */
         .pss-wildlife-card {
-            flex: 0 0 calc(100% - 10px);
+            flex: 0 0 calc(100% - var(--space-sm));
             max-width: 100%;
         }
         
         .pss-carousel-wrapper {
-            padding: 0 15px;
+            padding: 0 var(--space-md);
         }
         
         .pss-carousel-track {
-            gap: 10px;
+            gap: var(--space-sm);
             padding: 0;
         }
         
         .pss-wildlife-section {
-            padding: 40px 0;
+            padding: var(--space-2xl) 0;
         }
         
         .pss-wildlife-header {
-            padding: 0 15px;
+            padding: 0 var(--space-md);
         }
     }
     
@@ -646,7 +872,8 @@ if (!defined('ABSPATH')) {
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;  /* Hide overflow but position elements properly */
+        overflow: hidden;  /* Contain all elements within section */
+        box-sizing: border-box;
     }
     
     /* Background Layers */
@@ -693,7 +920,7 @@ if (!defined('ABSPATH')) {
     /* Decorative Plank */
     .pss-hero-plank {
         position: absolute;
-        top: clamp(80px, 15vh, 150px);  /* Responsive positioning */
+        top: clamp(100px, 18vh, 180px);  /* Position near top where headline will be */
         left: -14%;
         width: 65%;
         height: auto;
@@ -735,12 +962,13 @@ if (!defined('ABSPATH')) {
     .pss-hero-main {
         display: flex;
         flex-wrap: nowrap;
-        align-items: flex-start;
+        align-items: flex-start;  /* Align to top to work with plank */
         justify-content: space-between;
         gap: 40px;
         z-index: 15;
         width: 100%;
         position: relative;
+        height: 100%;  /* Use full height */
     }
     
     /* Left Column - Headline */
@@ -750,7 +978,7 @@ if (!defined('ABSPATH')) {
         flex-direction: column;
         justify-content: flex-start;
         padding-right: 20px;
-        margin-top: clamp(60px, 10vh, 110px);  /* Responsive margin for plank alignment */
+        margin-top: clamp(80px, 12vh, 140px);  /* Align with plank */
     }
     
     /* Right Column - Form and Badge */
@@ -762,6 +990,8 @@ if (!defined('ABSPATH')) {
         align-items: center;
         gap: 25px;
         max-width: 500px;
+        padding: 60px 0;  /* Ensure adequate padding for form and badge */
+        margin: auto 0;  /* Center vertically within available space */
     }
     
     /* Headline Styling */
@@ -789,17 +1019,19 @@ if (!defined('ABSPATH')) {
         background-color: var(--hero-green);
         border: 1px solid rgba(255, 217, 6, 0.3);
         border-radius: 12px;
-        padding: 20px;
+        padding: 25px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 15px;
+        width: 100%;
+        max-width: 450px;
     }
     
     .pss-hero-form-container h2 {
         color: var(--hero-white);
-        font-size: 1.5rem;
-        font-weight: 600;
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-semibold);
         margin: 0;
         text-align: center;
     }
@@ -821,7 +1053,8 @@ if (!defined('ABSPATH')) {
     .pss-hero-badge-container {
         display: flex;
         justify-content: center;
-        margin-top: 20px;  /* Reduced margin */
+        margin-top: 10px;
+        margin-bottom: 20px;  /* Add bottom margin to prevent cutoff */
         position: relative;
         z-index: 10;
     }
@@ -830,6 +1063,7 @@ if (!defined('ABSPATH')) {
         width: 200px;
         height: 200px;
         min-height: 200px;
+        flex-shrink: 0;  /* Prevent badge from shrinking */
         background-color: rgba(32, 61, 10, 0.87);
         border: 1px solid rgba(255, 217, 6, 0.3);
         border-radius: 50%;
@@ -837,11 +1071,12 @@ if (!defined('ABSPATH')) {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 10px;
+        padding: 15px;
         backdrop-filter: blur(10px);
         box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
         text-decoration: none;
         transition: transform 0.3s ease;
+        box-sizing: border-box;
     }
     
     .pss-hero-badge:hover {
@@ -886,8 +1121,8 @@ if (!defined('ABSPATH')) {
     
     /* ===== WHY CHOOSE SECTION STYLES ===== */
     .pss-why-choose-section {
-        background: white;
-        padding: 80px 20px;
+        background: var(--color-bg-white);
+        padding: var(--space-4xl) var(--space-lg);
     }
     
     .pss-why-choose-section .pss-content {
@@ -896,20 +1131,25 @@ if (!defined('ABSPATH')) {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 50px;
+        gap: var(--space-3xl);
     }
     
     /* Badge Images Container */
     .pss-badges-container {
         display: flex;
         justify-content: center;
-        gap: 60px;
+        gap: var(--space-3xl);
         width: 100%;
         flex-wrap: wrap;
     }
     
     .pss-badge {
         flex: 0 0 auto;
+        transition: transform var(--transition-base);
+    }
+    
+    .pss-badge:hover {
+        transform: scale(1.05);
     }
     
     .pss-badge img {
@@ -920,19 +1160,19 @@ if (!defined('ABSPATH')) {
     
     /* Main Heading */
     .pss-why-choose-heading {
-        font-size: clamp(2rem, 5vw, 3.5rem);
-        color: #203D0A;
+        font-size: var(--font-size-4xl);
+        color: var(--color-primary-dark);
         text-align: center;
-        font-weight: 700;
+        font-weight: var(--font-weight-bold);
         margin: 0;
-        line-height: 1.2;
+        line-height: var(--line-height-tight);
     }
     
     /* Features Row */
     .pss-features-row {
         display: flex;
         justify-content: center;
-        gap: 100px;
+        gap: var(--space-4xl);
         width: 100%;
         flex-wrap: wrap;
     }
@@ -943,41 +1183,53 @@ if (!defined('ABSPATH')) {
     }
     
     .pss-feature h3 {
-        color: #6EC207;
-        font-size: 1.5rem;
-        font-weight: 600;
+        color: var(--color-success);
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-semibold);
         margin: 0;
+        transition: color var(--transition-fast);
+    }
+    
+    .pss-feature h3:hover {
+        color: var(--color-success-dark);
     }
     
     /* Statistics Container */
     .pss-stats-container {
         display: flex;
         justify-content: center;
-        gap: 40px;
+        gap: var(--space-2xl);
         width: 100%;
         flex-wrap: wrap;
     }
     
     .pss-stat-card {
-        background: #F5F5F5;
-        border-radius: 12px;
-        padding: 30px 40px;
+        background: var(--color-bg-light);
+        border-radius: var(--radius-lg);
+        padding: var(--space-xl) var(--space-2xl);
         text-align: center;
         flex: 0 1 280px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        box-shadow: var(--shadow-sm);
+        transition: all var(--transition-base);
+    }
+    
+    .pss-stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
     }
     
     .pss-stat-number {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #6EC207;
-        margin-bottom: 10px;
+        font-size: var(--font-size-3xl);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-success);
+        margin-bottom: var(--space-sm);
     }
     
     .pss-stat-label {
-        font-size: 1rem;
-        color: #333;
-        font-weight: 500;
+        font-size: var(--font-size-base);
+        color: var(--color-text-secondary);
+        font-weight: var(--font-weight-medium);
+        line-height: var(--line-height-relaxed);
     }
     
     /* Local Experts */
@@ -986,22 +1238,30 @@ if (!defined('ABSPATH')) {
     }
     
     .pss-local-experts h3 {
-        font-size: 2rem;
-        color: #6EC207;
-        margin: 0 0 10px 0;
-        font-weight: 600;
+        font-size: var(--font-size-2xl);
+        color: var(--color-success);
+        margin: 0 0 var(--space-sm) 0;
+        font-weight: var(--font-weight-semibold);
     }
     
     .pss-local-experts p {
-        font-size: 1.2rem;
-        color: #333;
+        font-size: var(--font-size-lg);
+        color: var(--color-text-secondary);
         margin: 0;
     }
     
     /* Why Choose Section Responsive */
     @media (max-width: 768px) {
+        .pss-why-choose-section {
+            padding: var(--space-3xl) var(--space-md);
+        }
+        
+        .pss-why-choose-section .pss-content {
+            gap: var(--space-2xl);
+        }
+        
         .pss-badges-container {
-            gap: 30px;
+            gap: var(--space-xl);
         }
         
         .pss-badge img {
@@ -1010,27 +1270,33 @@ if (!defined('ABSPATH')) {
         
         .pss-features-row {
             flex-direction: column;
-            gap: 30px;
+            gap: var(--space-xl);
         }
         
         .pss-feature h3 {
-            font-size: 1.2rem;
+            font-size: var(--font-size-lg);
         }
         
         .pss-stats-container {
             flex-direction: column;
             align-items: center;
+            gap: var(--space-lg);
         }
         
         .pss-stat-card {
             width: 100%;
             max-width: 350px;
+            padding: var(--space-lg) var(--space-xl);
         }
     }
     
     @media (max-width: 480px) {
         .pss-why-choose-section {
-            padding: 60px 15px;
+            padding: var(--space-2xl) var(--space-sm);
+        }
+        
+        .pss-why-choose-section .pss-content {
+            gap: var(--space-xl);
         }
         
         .pss-badge img {
@@ -1153,6 +1419,305 @@ if (!defined('ABSPATH')) {
             width: 100%;
         }
     }
+    
+    /* ===== WILDLIFE CONTROL & PREVENTION SERVICES SECTION ===== */
+    .pss-wildlife-control-section {
+        background: linear-gradient(135deg, #6ab04c 0%, #5a9b3d 100%);
+        padding: var(--space-2xl) var(--space-lg);
+        position: relative;
+        overflow: visible;
+    }
+    
+    .pss-wildlife-control-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>');
+        background-size: 50px 50px;
+        pointer-events: none;
+    }
+    
+    .pss-control-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Main Heading */
+    .pss-control-heading {
+        font-size: var(--font-size-2xl);
+        color: white;
+        text-align: center;
+        font-weight: var(--font-weight-bold);
+        margin: 0 0 var(--space-xl) 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        line-height: var(--line-height-tight);
+    }
+    
+    /* Central Card */
+    .pss-control-card-center {
+        background: white;
+        border-radius: var(--radius-lg);
+        padding: var(--space-lg) var(--space-xl);
+        text-align: center;
+        margin: calc(50px + var(--space-md)) auto var(--space-xl);
+        max-width: 750px;
+        box-shadow: var(--shadow-xl);
+        position: relative;
+    }
+    
+    .pss-control-badge-center {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
+        height: 140px;
+        object-fit: contain;
+        background: white;
+        border-radius: 50%;
+        padding: var(--space-sm);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .pss-control-card-title {
+        font-size: var(--font-size-lg);
+        color: var(--color-primary-dark);
+        font-weight: var(--font-weight-bold);
+        margin: calc(90px + var(--space-sm)) 0 var(--space-sm) 0;
+        line-height: var(--line-height-tight);
+    }
+    
+    .pss-control-card-text {
+        font-size: var(--font-size-sm);
+        color: var(--color-text-secondary);
+        line-height: var(--line-height-normal);
+        margin-bottom: var(--space-md);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Control Buttons */
+    .pss-control-buttons {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-lg);
+        flex-wrap: wrap;
+    }
+    
+    .pss-control-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--button-padding-y) var(--button-padding-x);
+        background: var(--button-primary-bg);
+        color: white;
+        font-size: var(--button-font-size);
+        font-weight: var(--button-font-weight);
+        line-height: var(--button-line-height);
+        text-decoration: none;
+        border: 1px solid transparent;
+        border-radius: var(--button-border-radius);
+        transition: all var(--transition-button);
+        cursor: pointer;
+        user-select: none;
+        min-height: 50px;
+        text-align: center;
+    }
+    
+    .pss-control-btn:hover {
+        background: var(--button-primary-hover-bg);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(255, 112, 0, 0.25);
+    }
+    
+    .pss-control-btn:active {
+        transform: translateY(0);
+    }
+    
+    /* Service Cards Row */
+    .pss-control-cards-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-md);
+        margin-top: calc(var(--space-xl) + 40px);
+    }
+    
+    /* Individual Service Card */
+    .pss-control-card {
+        background: white;
+        border-radius: var(--radius-lg);
+        padding: var(--space-md);
+        text-align: center;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        padding-top: calc(80px + var(--space-md));
+        transition: all var(--transition-base);
+    }
+    
+    .pss-control-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-xl);
+    }
+    
+    .pss-control-badge {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        background: white;
+        border-radius: 50%;
+        padding: var(--space-xs);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .pss-control-card-heading {
+        font-size: var(--font-size-base);
+        color: var(--color-primary-dark);
+        font-weight: var(--font-weight-bold);
+        margin: 0 0 var(--space-xs) 0;
+        line-height: var(--line-height-tight);
+    }
+    
+    .pss-control-card-description {
+        font-size: var(--font-size-xs);
+        color: var(--color-text-secondary);
+        line-height: var(--line-height-normal);
+        margin-bottom: var(--space-md);
+        min-height: 60px;
+    }
+    
+    .pss-control-card-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: calc(var(--button-padding-y) * 0.75) var(--button-padding-x);
+        background: var(--button-secondary-bg);
+        color: var(--color-primary-dark);
+        font-size: var(--button-font-size);
+        font-weight: var(--button-font-weight);
+        line-height: var(--button-line-height);
+        text-decoration: none;
+        border: var(--button-secondary-border);
+        border-color: var(--color-primary-dark);
+        border-radius: var(--button-border-radius);
+        transition: all var(--transition-button);
+        cursor: pointer;
+        user-select: none;
+        min-height: 44px;
+    }
+    
+    .pss-control-card-btn:hover {
+        background: var(--color-primary-dark);
+        color: white;
+        border-color: var(--color-primary-dark);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(32, 61, 10, 0.2);
+    }
+    
+    .pss-control-card-btn:active {
+        transform: translateY(0);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .pss-control-cards-row {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .pss-control-card:last-child {
+            grid-column: 1 / -1;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .pss-wildlife-control-section {
+            padding: var(--space-3xl) var(--space-md);
+        }
+        
+        .pss-control-heading {
+            font-size: var(--font-size-3xl);
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .pss-control-card-center {
+            padding: var(--space-xl) var(--space-lg);
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .pss-control-badge-center {
+            width: 150px;
+            height: 150px;
+            top: -50px;
+        }
+        
+        .pss-control-card-title {
+            margin-top: calc(100px + var(--space-lg));
+            font-size: var(--font-size-xl);
+        }
+        
+        .pss-control-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .pss-control-btn {
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .pss-control-cards-row {
+            grid-template-columns: 1fr;
+            gap: calc(var(--space-3xl) + 50px);
+            margin-top: calc(var(--space-3xl) + 50px);
+        }
+        
+        .pss-control-card {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .pss-control-heading {
+            font-size: var(--font-size-2xl);
+        }
+        
+        .pss-control-card-center {
+            padding: var(--space-lg) var(--space-md);
+        }
+        
+        .pss-control-badge-center {
+            width: 120px;
+            height: 120px;
+            top: -40px;
+        }
+        
+        .pss-control-card-title {
+            margin-top: calc(80px + var(--space-md));
+            font-size: var(--font-size-lg);
+        }
+        
+        .pss-control-badge {
+            width: 120px;
+            height: 120px;
+            top: -40px;
+        }
+        
+        .pss-control-card {
+            padding-top: calc(80px + var(--space-lg));
+        }
+    }
 </style>
 
 <div class="pss-wrapper">
@@ -1223,54 +1788,63 @@ if (!defined('ABSPATH')) {
                                         .pss-form-step {
                                             display: flex;
                                             flex-direction: column;
-                                            gap: 15px;
+                                            gap: var(--space-md);
                                         }
                                         .pss-step-header {
                                             color: white;
-                                            font-size: 14px;
-                                            margin-bottom: 10px;
+                                            font-size: var(--font-size-sm);
+                                            margin-bottom: var(--space-sm);
                                         }
                                         .pss-progress-bar {
                                             height: 8px;
                                             background: rgba(255,255,255,0.2);
-                                            border-radius: 4px;
-                                            margin-top: 8px;
+                                            border-radius: var(--radius-sm);
+                                            margin-top: var(--space-xs);
                                         }
                                         .pss-progress-fill {
                                             height: 100%;
-                                            background: #6EC207;
-                                            border-radius: 4px;
+                                            background: var(--color-success);
+                                            border-radius: var(--radius-sm);
+                                            transition: width var(--transition-base);
                                         }
                                         .pss-form-row {
                                             display: flex;
-                                            gap: 10px;
+                                            gap: var(--space-sm);
                                         }
                                         .pss-fallback-form input {
                                             flex: 1;
-                                            padding: 12px;
+                                            padding: var(--space-sm) var(--space-md);
                                             border: none;
                                             border-bottom: 2px solid var(--hero-yellow);
                                             background: rgba(255,255,255,0.1);
                                             color: white;
-                                            font-size: 16px;
+                                            font-size: var(--font-size-base);
+                                            transition: all var(--transition-fast);
                                         }
                                         .pss-fallback-form input::placeholder {
                                             color: rgba(255,255,255,0.7);
                                         }
+                                        .pss-fallback-form input:focus {
+                                            outline: none;
+                                            background: rgba(255,255,255,0.15);
+                                            border-bottom-color: var(--color-success);
+                                        }
                                         .pss-btn-next {
                                             align-self: flex-end;
-                                            padding: 10px 30px;
-                                            background: #6EC207;
+                                            padding: var(--space-sm) var(--space-xl);
+                                            background: var(--color-success);
                                             color: white;
                                             border: none;
-                                            border-radius: 4px;
-                                            font-size: 16px;
-                                            font-weight: bold;
+                                            border-radius: var(--radius-sm);
+                                            font-size: var(--font-size-base);
+                                            font-weight: var(--font-weight-bold);
                                             cursor: pointer;
-                                            transition: opacity 0.3s;
+                                            transition: all var(--transition-fast);
                                         }
                                         .pss-btn-next:hover {
-                                            opacity: 0.9;
+                                            background: var(--color-success-dark);
+                                            transform: translateY(-2px);
+                                            box-shadow: var(--shadow-md);
                                         }
                                     </style>
                                     <?php
@@ -1594,7 +2168,93 @@ if (!defined('ABSPATH')) {
             </div>
         </section>
         
-        <!-- Section 4: Our Process -->
+        <!-- Section 4: Wildlife Control & Prevention Services -->
+        <section id="pss-wildlife-control" class="pss-snap-section pss-wildlife-control-section">
+            <div class="pss-control-content">
+                <!-- Main Heading -->
+                <h1 class="pss-control-heading">Wildlife Control & Prevention Services</h1>
+                
+                <!-- Central Card with Badge -->
+                <div class="pss-control-card-center">
+                    <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/badges/general-commercial-wildlife-control-corrected.webp'; ?>" 
+                         alt="Wildlife Control General & Commercial" 
+                         class="pss-control-badge-center"
+                         loading="lazy">
+                    
+                    <h3 class="pss-control-card-title">General & Commercial<br>Wildlife Control</h3>
+                    
+                    <p class="pss-control-card-text">
+                        Whether you're managing a home, office, warehouse, or retail space, wildlife issues can disrupt 
+                        daily operations and pose health and safety risks. We offer customized wildlife control solutions for 
+                        both residential and commercial properties, ensuring effective and humane removal tailored to your 
+                        specific environment.
+                    </p>
+                    
+                    <div class="pss-control-buttons">
+                        <a href="#" class="pss-control-btn">General Control</a>
+                        <a href="#" class="pss-control-btn">Commercial Control</a>
+                    </div>
+                </div>
+                
+                <!-- Three Service Cards -->
+                <div class="pss-control-cards-row">
+                    <!-- Prevention Card -->
+                    <div class="pss-control-card">
+                        <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/badges/module-wildlife-prevention.webp'; ?>" 
+                             alt="Wildlife Prevention" 
+                             class="pss-control-badge"
+                             loading="lazy">
+                        
+                        <h3 class="pss-control-card-heading">Wildlife<br>Prevention</h3>
+                        
+                        <p class="pss-control-card-description">
+                            Our wildlife prevention services include sealing entry points, habitat 
+                            modification, and deterrent installation to protect your home.
+                        </p>
+                        
+                        <a href="#" class="pss-control-card-btn">Learn More</a>
+                    </div>
+                    
+                    <!-- Remediation Card -->
+                    <div class="pss-control-card">
+                        <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/badges/module-wildlife-remediation.webp'; ?>" 
+                             alt="Wildlife Remediation" 
+                             class="pss-control-badge"
+                             loading="lazy">
+                        
+                        <h3 class="pss-control-card-heading">Wildlife<br>Remediation</h3>
+                        
+                        <p class="pss-control-card-description">
+                            After wildlife has been removed, damage and contamination often remain. 
+                            Our remediation services include cleanup, sanitization, odor removal, and 
+                            structural repairs to restore your property to a safe, healthy condition and 
+                            prevent future infestations.
+                        </p>
+                        
+                        <a href="#" class="pss-control-card-btn">Learn More</a>
+                    </div>
+                    
+                    <!-- Removal Card -->
+                    <div class="pss-control-card">
+                        <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/badges/module-wildlife-removal.webp'; ?>" 
+                             alt="Wildlife Removal" 
+                             class="pss-control-badge"
+                             loading="lazy">
+                        
+                        <h3 class="pss-control-card-heading">Emergency<br>Wildlife Removal</h3>
+                        
+                        <p class="pss-control-card-description">
+                            Need immediate assistance? Our 24/7 emergency wildlife removal services 
+                            ensure fast, effective solutions for urgent wildlife problems.
+                        </p>
+                        
+                        <a href="#" class="pss-control-card-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 5: Our Process -->
         <section id="pss-process" class="pss-snap-section">
             <div class="pss-content">
                 <h2>Our Process</h2>
