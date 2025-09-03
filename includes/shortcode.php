@@ -33,18 +33,13 @@ function pss_render_scroll_snap_shortcode($atts) {
     ob_start();
     
     // Include the appropriate template
-    if ($atts['template'] === 'full') {
-        include PSS_PLUGIN_DIR . 'templates/palmetto-scroll-full.php';
-    } else if ($atts['template'] === 'working') {
-        include PSS_PLUGIN_DIR . 'templates/palmetto-scroll-working.php';
-    } else if ($atts['template'] === 'viewport') {
-        include PSS_PLUGIN_DIR . 'templates/palmetto-scroll-viewport.php';
-    } else if ($atts['template'] === 'seamless') {
-        include PSS_PLUGIN_DIR . 'templates/palmetto-scroll-seamless.php';
-    } else if ($atts['template'] === 'final') {
-        include PSS_PLUGIN_DIR . 'templates/palmetto-scroll-final.php';
+    // Only use existing templates after cleanup
+    $template_file = PSS_PLUGIN_DIR . 'templates/palmetto-scroll-final.php';
+    
+    if (file_exists($template_file)) {
+        include $template_file;
     } else {
-        include PSS_PLUGIN_DIR . 'templates/palmetto-scroll-content.php';
+        echo '<p>Error: Template file not found.</p>';
     }
     
     // Return the buffered content
