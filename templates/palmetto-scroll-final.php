@@ -1158,6 +1158,127 @@ $assets_url = $plugin_url . 'assets/';
         color: var(--text-primary);
     }
     
+    /* Section 7: House Animals CTA */
+    .house-cta-section {
+        background: linear-gradient(135deg, #2B5F2F 0%, #6DAB3C 100%);
+        padding: 4rem 0;
+        color: white;
+    }
+    
+    .house-cta-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .house-cta-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 0;
+        line-height: 1.2;
+    }
+    
+    .home-animals {
+        max-width: 1000px;
+        margin: 0 auto 3rem;
+    }
+    
+    
+
+.home-animals .house {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+.home-animals .house a {
+  position: absolute;
+  left: 30%;
+  top: 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  width: 12.8%;
+  height: 30%;
+  border-radius: 50%;
+  background: rgba(21, 51, 1, 0.4);
+  opacity: 0;
+}
+.home-animals .house a:hover {
+  opacity: 1;
+}
+.home-animals .house a.ha-01 {
+  left: 0.4%;
+  top: 0.8%;
+}
+.home-animals .house a.ha-02 {
+  left: 4%;
+  top: 67%;
+}
+.home-animals .house a.ha-03 {
+  left: 60%;
+  top: 0.8%;
+}
+.home-animals .house a.ha-04 {
+  left: 79.4%;
+  top: 9.8%;
+}
+.home-animals .house a.ha-05 {
+  left: 86.92%;
+  top: 40.1%;
+}
+.home-animals .house a.ha-06 {
+  left: 76.9%;
+  top: 66.8%;
+}
+.home-animals .house a .text {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home-animals .house a .text {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home-animals .house a .text {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home-animals .house a .text {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home-animals .house a .text {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home-animals .house a .text {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.house-cta-content {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
     @media (max-width: 768px) {
         .commercial-card {
             padding: 2rem 1.5rem;
@@ -1936,6 +2057,51 @@ $assets_url = $plugin_url . 'assets/';
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 7: House Animals CTA -->
+        <section class="pss-snap-section house-cta-section" data-section-name="CTA">
+            <div class="container">
+                <div class="house-cta-header">
+                    <h2 class="house-cta-title">Protect Your Property<br>Leading Wildlife Removal Experts!</h2>
+                </div>
+                
+                <div class="home-animals">
+                    <div class="house">
+                        <div class="house-img">
+                            <img src="<?php echo plugin_dir_url(__DIR__) . 'assets/images/house-animals.webp'; ?>" 
+                                 alt="House with wildlife hotspots" 
+                                 class="img-responsive">
+                        </div>
+                        <a class="house-animals ha-01" href="https://palmettowildlife.futuresite.dev/wildlife-removal/bats/">
+                            <span class="text">Bats</span>
+                        </a>
+                        <a class="house-animals ha-02" href="https://palmettowildlife.futuresite.dev/wildlife-removal/snakes/">
+                            <span class="text">Snakes</span>
+                        </a>
+                        <a class="house-animals ha-03" href="https://palmettowildlife.futuresite.dev/wildlife-removal/squirrels/">
+                            <span class="text">Squirrels</span>
+                        </a>
+                        <a class="house-animals ha-04" href="https://palmettowildlife.futuresite.dev/wildlife-removal/opossums/">
+                            <span class="text">Opossums</span>
+                        </a>
+                        <a class="house-animals ha-05" href="https://palmettowildlife.futuresite.dev/wildlife-removal/raccoons/">
+                            <span class="text">Raccoons</span>
+                        </a>
+                        <a class="house-animals ha-06" href="https://palmettowildlife.futuresite.dev/wildlife-removal/rats/">
+                            <span class="text">Rats</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="house-cta-content">
+                    <h3 class="house-cta-text">Get Expert Wildlife Removal Today!</h3>
+                    <div class="house-cta-buttons">
+                        <a href="https://palmettowildlife.futuresite.dev/contact/" class="btn-primary">Get Started Now</a>
+                        <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/" class="btn-secondary">Get Started Now</a>
                     </div>
                 </div>
             </div>
