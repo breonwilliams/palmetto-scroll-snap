@@ -1606,9 +1606,10 @@ $assets_url = $plugin_url . 'assets/';
     <div class="hero-col">
       <div class="consultation-card">
         <h2 class="consultation-title">Request A Free Consultation</h2>
-
         <div class="divider"></div>
-
+        <div>
+          <?php echo do_shortcode("[fluentform id='5']"); ?>  
+        </div>
         <a
           href="https://g.co/kgs/DwhpN7n"
           target="_blank"
@@ -1764,6 +1765,13 @@ $assets_url = $plugin_url . 'assets/';
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- TrustIndex Carousel -->
+                    <div class="row" style="padding-bottom: var(--grid-gutter);">
+                        <div class="col-12">
+                            <script defer async src='https://cdn.trustindex.io/loader.js?cfc8cc643d5d833d873607bd747'></script>
                         </div>
                     </div>
 
