@@ -1435,7 +1435,7 @@ $assets_url = $plugin_url . 'assets/';
     .house-cta-title {
         font-size: 3rem;
         font-weight: 700;
-        color: white;
+        color: white !important;
         margin-bottom: 0;
         line-height: 1.2;
     }
