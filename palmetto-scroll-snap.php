@@ -13,10 +13,16 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-// Define plugin constants
-define('PSS_PLUGIN_DIR', plugin_dir_path(__FILE__));
-define('PSS_PLUGIN_URL', plugin_dir_url(__FILE__));
-define('PSS_VERSION', '2.0.0');
+// Define plugin constants with checks to prevent redefinition
+if (!defined('PSS_PLUGIN_DIR')) {
+    define('PSS_PLUGIN_DIR', plugin_dir_path(__FILE__));
+}
+if (!defined('PSS_PLUGIN_URL')) {
+    define('PSS_PLUGIN_URL', plugin_dir_url(__FILE__));
+}
+if (!defined('PSS_VERSION')) {
+    define('PSS_VERSION', '2.0.0');
+}
 
 /**
  * Main plugin class
