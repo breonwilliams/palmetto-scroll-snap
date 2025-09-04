@@ -30,6 +30,10 @@ $assets_url = $plugin_url . 'assets/';
         padding: 0;
     }
 
+    .pss-wrapper {
+        margin-top: 140px;
+    }
+
     /* Main wrapper for scroll snap - stable container */
     .pss-scroll-wrapper {
         position: relative;
@@ -828,13 +832,13 @@ $assets_url = $plugin_url . 'assets/';
 }
 
 .hero-heading {
-  font-family: Montserrat, sans-serif;
-  font-size: clamp(24px, 5vw, 36px); /* Responsive font size */
-  font-weight: 900;
-  letter-spacing: 2px;
-  line-height: 1.12;
-  text-transform: uppercase;
-  color: white;
+  font-family: Montserrat, sans-serif !important;
+  font-size: clamp(24px, 5vw, 36px) !important; /* Responsive font size */
+  font-weight: 900 !important;
+  letter-spacing: 2px !important;
+  line-height: 1.12 !important;
+  text-transform: uppercase !important;
+  color: white !important;
   max-width: 100%;
   filter: drop-shadow(2px 2px 1px #203d0a) drop-shadow(-2px -2px 1px #203d0a)
     drop-shadow(-2px 2px 1px #203d0a) drop-shadow(2px -2px 1px #203d0a);
@@ -881,12 +885,12 @@ $assets_url = $plugin_url . 'assets/';
 }
 
 .consultation-title {
-  font-family: "DM Serif Display", serif;
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: white;
-  margin-bottom: 20px;
+  font-family: "DM Serif Display", serif !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px !important;
+  color: white !important;
+  margin-bottom: 20px !important;
 }
 
 .divider {
