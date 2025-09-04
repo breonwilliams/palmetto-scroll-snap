@@ -716,6 +716,52 @@ $assets_url = $plugin_url . 'assets/';
         }
     }
 
+    /* ===== SECTION SPECIFIC STYLES ===== */
+    
+    /* Section 1: Hero */
+    .hero-section {
+        background-image: url('<?php echo plugin_dir_url(__DIR__) . 'assets/images/hero/cityscape-darker.webp'; ?>');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: white;
+        max-width: 1200px;
+        padding: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        color: white;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+        color: white;
+    }
+    
+    .hero-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
     /* ===== PLACEHOLDER STYLES (TEMPORARY) ===== */
     .placeholder-content {
         text-align: center;
@@ -743,7 +789,6 @@ $assets_url = $plugin_url . 'assets/';
 
     /* Section background colors for visual distinction */
     #section-1 {
-        background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
         color: var(--text-inverse);
     }
 
@@ -1331,10 +1376,14 @@ $assets_url = $plugin_url . 'assets/';
     <div class="pss-scroll-wrapper" id="pss-container">
         
         <!-- Section 1: Hero/Landing -->
-        <section id="section-1" class="pss-snap-section">
-            <div class="placeholder-content">
-                <h1>Section 1</h1>
-                <p>Hero/Landing section placeholder.<br>Ready for custom design system implementation.</p>
+        <section id="section-1" class="pss-snap-section hero-section" data-section-name="Home">
+            <div class="hero-content">
+                <h1 class="hero-title">Professional Wildlife Removal & Control</h1>
+                <p class="hero-subtitle">Protecting homes and businesses across South Carolina with humane, effective wildlife solutions</p>
+                <div class="hero-buttons">
+                    <a href="https://palmettowildlife.futuresite.dev/contact/" class="btn-primary">Get Free Inspection</a>
+                    <a href="tel:1-855-465-1088" class="btn-secondary" style="background-color: transparent; border: 2px solid white; color: white;">Call Now: 1-855-465-1088</a>
+                </div>
             </div>
         </section>
         
@@ -2100,7 +2149,7 @@ $assets_url = $plugin_url . 'assets/';
                 <div class="house-cta-content">
                     <h3 class="house-cta-text">Get Expert Wildlife Removal Today!</h3>
                     <div class="house-cta-buttons">
-                        <a href="https://palmettowildlife.futuresite.dev/contact/" class="btn-primary">Get Started Now</a>
+                        <a href="https://palmettowildlife.futuresite.dev/shedule/" class="btn-primary">Schedule Inspection</a>
                         <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/" class="btn-secondary">Get Started Now</a>
                     </div>
                 </div>
