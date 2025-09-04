@@ -61,6 +61,7 @@ $assets_url = $plugin_url . 'assets/';
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
 
     /* Progress indicators */
@@ -990,6 +991,173 @@ $assets_url = $plugin_url . 'assets/';
         margin-bottom: 4rem;
     }
     
+    /* Section 5: Locations */
+    #section-5 {
+        background: #F3F4F6;
+        color: var(--text-primary);
+        padding: var(--space-4xl) var(--space-xl);
+    }
+    
+    .locations-header {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto var(--space-3xl);
+    }
+    
+    .locations-header h2 {
+        font-size: var(--font-size-3xl);
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: var(--space-lg);
+    }
+    
+    .locations-header p {
+        font-size: var(--font-size-lg);
+        color: var(--text-secondary);
+        line-height: 1.6;
+    }
+    
+    .locations-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .location-card {
+        background: white;
+        border-radius: 6px;
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+        color: var(--text-primary);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        height: 100%;
+        justify-content: center;
+    }
+    
+    .location-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        color: var(--text-primary);
+    }
+    
+    .location-icon {
+        flex-shrink: 0;
+        width: 24px;
+        height: 32px;
+    }
+    
+    .location-icon svg {
+        width: 100%;
+        height: 100%;
+        fill: #6DAB3C;
+    }
+    
+    .location-name {
+        font-size: var(--font-size-lg);
+        font-weight: 600;
+        margin: 0;
+        color: var(--text-primary);
+    }
+    
+    .location-item {
+        margin-bottom: var(--space-lg);
+    }
+    
+    /* Section 6: FAQ */
+    .faq-section {
+        background-color: white;
+        padding: 4rem 0;
+    }
+    
+    .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .faq-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .faq-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #2B5F2F;
+        margin-bottom: 0;
+    }
+    
+    .faq-item {
+        border-bottom: 1px solid #E5E7EB;
+        margin-bottom: 0;
+    }
+    
+    .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 16px;
+        text-align: left;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: color 0.2s ease;
+    }
+    
+    .faq-question:hover, .faq-question:focus {
+        color: var(--primary-color);
+        background-color: #F3F4F6 !important;
+    }
+    
+    .faq-icon {
+        position: absolute;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        color: #6DAB3C;
+        transition: transform 0.3s ease;
+    }
+    
+    .faq-icon svg {
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+    }
+    
+    .faq-item.active .faq-icon {
+        transform: rotate(45deg);
+    }
+    
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0 16px
+    }
+    
+    .faq-item.active .faq-answer {
+        max-height: 300px;
+    }
+    
+    .faq-content {
+        padding: 0 0 1.5rem 0;
+        color: var(--text-secondary);
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .faq-content strong {
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+    
     @media (max-width: 768px) {
         .commercial-card {
             padding: 2rem 1.5rem;
@@ -1462,6 +1630,317 @@ $assets_url = $plugin_url . 'assets/';
             </div>
         </section>
         
+        <!-- Section 5: Featured Locations -->
+        <section id="section-5" class="pss-snap-section">
+            <div class="locations-header">
+                <h2>Introducing Our Featured Website Components</h2>
+                <p>Unlock the true potential of your website with our handpicked collection of cutting-edge components.</p>
+            </div>
+            
+            <div class="locations-grid">
+                <div class="container">
+                    <div class="row">
+                        <!-- Row 1 -->
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/aiken-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Aiken, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/charleston-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Charleston, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/charlotte-nc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Charlotte, NC</h3>
+                            </a>
+                        </div>
+                        
+                        <!-- Row 2 -->
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/clemson-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Clemson, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/columbia-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Columbia, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/five-forks-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Five Forks, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <!-- Row 3 -->
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/florence-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Florence, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/greenville-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Greenville, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/greer-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Greer, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <!-- Row 4 -->
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/hilton-head-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Hilton Head, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/lexington-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Lexington, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/myrtle-beach-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Myrtle Beach, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <!-- Row 5 -->
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/north-myrtle-beach-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">North Myrtle Beach, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/rock-hill-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Rock Hill, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/seven-oaks-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Seven Oaks, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <!-- Row 6 -->
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/spartanburg-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Spartanburg, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/sumter-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">Sumter, SC</h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 location-item">
+                            <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/west-columbia-sc/" class="location-card">
+                                <div class="location-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="location-name">West Columbia, SC</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 6: FAQ -->
+        <section class="pss-snap-section faq-section" data-section-name="FAQ">
+            <div class="container">
+                <div class="faq-container">
+                    <div class="faq-header">
+                        <h2 class="faq-title">Frequently Asked Questions (FAQs)</h2>
+                    </div>
+                    
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>How much does wildlife removal cost?</span>
+                                <div class="faq-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content">
+                                    Costs vary based on species, severity, and exclusion needs. Call us for a free estimate.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Are your wildlife removal methods humane?</span>
+                                <div class="faq-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content">
+                                    Yes! We follow <strong>strict ethical and legal guidelines</strong>, using <strong>non-lethal and humane trapping methods whenever possible</strong>.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Do you handle both residential and commercial wildlife control?</span>
+                                <div class="faq-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content">
+                                    Yes! We provide <strong>custom solutions for homeowners, businesses, and industrial properties</strong>.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>How do I schedule a wildlife inspection?</span>
+                                <div class="faq-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content">
+                                    You can <strong>call us at 1-855-465-1088</strong> or <strong>schedule an inspection online</strong>.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Do you offer emergency wildlife removal?</span>
+                                <div class="faq-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content">
+                                    Yes! We provide <strong>same-day and 24/7 emergency wildlife control services</strong>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </div>
 </div>
 
@@ -1692,6 +2171,37 @@ $assets_url = $plugin_url . 'assets/';
     }
 })();
 
+// FAQ Accordion functionality
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const button = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        
+        button.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            // Toggle current item
+            if (isActive) {
+                item.classList.remove('active');
+                button.setAttribute('aria-expanded', 'false');
+            } else {
+                item.classList.add('active');
+                button.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+}
+
 // Carousel functionality
 function initCarousel() {
     const track = document.getElementById('carousel-track');
@@ -1754,11 +2264,15 @@ function initCarousel() {
     });
 }
 
-// Initialize carousel when DOM is ready
+// Initialize carousel and FAQ when DOM is ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCarousel);
+    document.addEventListener('DOMContentLoaded', function() {
+        initCarousel();
+        initFAQ();
+    });
 } else {
     initCarousel();
+    initFAQ();
 }
 
 // Additional protection: Monitor for any attempts to recreate Lenis after page load
