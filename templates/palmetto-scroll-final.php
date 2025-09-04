@@ -730,6 +730,19 @@ $assets_url = $plugin_url . 'assets/';
         justify-content: center;
         min-height: 100vh;
     }
+
+    .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(https://palmettowildlife.futuresite.dev/wp-content/uploads/2025/05/brushbg-alt-small-scaled-1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    }
     
     .hero-content {
         position: relative;
@@ -761,6 +774,206 @@ $assets_url = $plugin_url . 'assets/';
         justify-content: center;
         flex-wrap: wrap;
     }
+
+    @media (max-width: 992px) {
+  .truck-left-col {
+    display: none;
+  }
+}
+.truck-right-col {
+  display: none;
+}
+@media (max-width: 992px) {
+  .truck-right-col {
+    display: block;
+  }
+}
+
+.hero-row {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  max-width: 1250px;
+  margin: auto;
+  flex-direction: row;
+  padding: 50px 0;
+}
+@media (max-width: 992px) {
+  .hero-row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.hero-row .hero-col {
+  flex: 1;
+}
+.wooden-plank {
+  position: absolute;
+  top: 100px;
+  left: -14%;
+  width: 65%;
+  height: auto;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .wooden-plank {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.hero-heading {
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(24px, 5vw, 36px); /* Responsive font size */
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: white;
+  max-width: 100%;
+  filter: drop-shadow(2px 2px 1px #203d0a) drop-shadow(-2px -2px 1px #203d0a)
+    drop-shadow(-2px 2px 1px #203d0a) drop-shadow(2px -2px 1px #203d0a);
+  margin-top: 70px;
+}
+
+@media (max-width: 992px) {
+  .hero-heading {
+    margin-top: 0;
+  }
+}
+
+.highlight {
+  color: #ffd906; /* Golden yellow for highlights */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: clamp(20px, 6vw, 28px);
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: clamp(18px, 7vw, 24px);
+    letter-spacing: 0.5px;
+  }
+}
+
+.consultation-card {
+  background: rgba(32, 61, 10, 0.87);
+  border: 1px solid rgba(109, 171, 60, 0.83);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .consultation-card {
+    margin: auto;
+  }
+}
+
+.consultation-title {
+  font-family: "DM Serif Display", serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.divider {
+  width: 250px;
+  height: 2px;
+  background: rgb(117, 202, 52);
+  margin: 0 auto 30px auto;
+}
+
+.google-review-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.review-circle {
+  width: 200px;
+  height: 200px;
+  background: rgba(18, 20, 21, 0.72);
+  border: 1px solid rgb(18, 20, 21);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 -10px 20px -5px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+}
+
+.google-icon svg {
+  width: 40px;
+  height: 40px;
+  fill: white;
+  margin-bottom: 10px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+
+.star {
+  width: 18px;
+  height: 18px;
+  fill: #ff7000;
+}
+
+.rating-text {
+  font-family: "DM Serif Display", serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.review-count {
+  font-size: 13px;
+  color: rgb(117, 202, 52);
+}
+
+@media (max-width: 480px) {
+  .consultation-card {
+    padding: 15px;
+  }
+
+  .consultation-title {
+    font-size: 20px;
+  }
+
+  .review-circle {
+    width: 160px;
+    height: 160px;
+    padding: 25px;
+  }
+
+  .divider {
+    width: 200px;
+  }
+
+  .star {
+    width: 16px;
+    height: 16px;
+  }
+}
     
     /* ===== PLACEHOLDER STYLES (TEMPORARY) ===== */
     .placeholder-content {
@@ -1377,14 +1590,75 @@ $assets_url = $plugin_url . 'assets/';
         
         <!-- Section 1: Hero/Landing -->
         <section id="section-1" class="pss-snap-section hero-section" data-section-name="Home">
-            <div class="hero-content">
-                <h1 class="hero-title">Professional Wildlife Removal & Control</h1>
-                <p class="hero-subtitle">Protecting homes and businesses across South Carolina with humane, effective wildlife solutions</p>
-                <div class="hero-buttons">
-                    <a href="https://palmettowildlife.futuresite.dev/contact/" class="btn-primary">Get Free Inspection</a>
-                    <a href="tel:1-855-465-1088" class="btn-secondary" style="background-color: transparent; border: 2px solid white; color: white;">Call Now: 1-855-465-1088</a>
-                </div>
+            <img
+    class="wooden-plank"
+    src="https://palmettowildlife.futuresite.dev/wp-content/uploads/2025/05/plank-but-smaller.webp"
+  />
+  <div class="hero-row">
+    <div class="hero-col">
+      <h1 class="hero-heading">
+        Expert <span class="highlight">Wildlife Removal</span> &amp;
+        <span class="highlight">Animal Control Services</span><br />
+        in SC &amp; NC
+      </h1>
+      <img src="https://palmettowildlife.futuresite.dev/wp-content/uploads/2025/04/truck-edit.webp" alt="Palmetto Wild Life Truck" class="truck-left-col" />
+    </div>
+    <div class="hero-col">
+      <div class="consultation-card">
+        <h2 class="consultation-title">Request A Free Consultation</h2>
+
+        <div class="divider"></div>
+
+        <a
+          href="https://g.co/kgs/DwhpN7n"
+          target="_blank"
+          class="google-review-link"
+        >
+          <div class="review-circle">
+            <div class="google-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path
+                  d="M16.319 13.713v5.487h9.075c-0.369 2.356-2.744 6.9-9.075 6.9-5.463 0-9.919-4.525-9.919-10.1s4.456-10.1 9.919-10.1c3.106 0 5.188 1.325 6.375 2.469l4.344-4.181c-2.788-2.612-6.4-4.188-10.719-4.188-8.844 0-16 7.156-16 16s7.156 16 16 16c9.231 0 15.363-6.494 15.363-15.631 0-1.050-0.113-1.85-0.25-2.650l-15.113-0.006z"
+                ></path>
+              </svg>
             </div>
+
+            <div class="stars">
+              <svg class="star" viewBox="0 0 576 512">
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                ></path>
+              </svg>
+              <svg class="star" viewBox="0 0 576 512">
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                ></path>
+              </svg>
+              <svg class="star" viewBox="0 0 576 512">
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                ></path>
+              </svg>
+              <svg class="star" viewBox="0 0 576 512">
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                ></path>
+              </svg>
+              <svg class="star" viewBox="0 0 576 512">
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                ></path>
+              </svg>
+            </div>
+
+            <div class="rating-text">5 Star Rating</div>
+            <div class="review-count">Over 90 Reviews</div>
+          </div>
+        </a>
+      </div>
+      <img src="https://palmettowildlife.futuresite.dev/wp-content/uploads/2025/04/truck-edit.webp" alt="Palmetto Wild Life Truck" class="truck-right-col" />
+    </div>
+  </div>
         </section>
         
         <!-- Section 2: Why Choose Palmetto -->
