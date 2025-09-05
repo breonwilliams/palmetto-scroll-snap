@@ -66,6 +66,9 @@ $assets_url = $plugin_url . 'assets/';
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        padding-top: 120px;
+        padding-bottom: 150px;
+        box-sizing: border-box;
     }
 
     /* Progress indicators */
@@ -129,7 +132,7 @@ $assets_url = $plugin_url . 'assets/';
         .pss-snap-section {
             min-height: auto;
             scroll-snap-align: none;
-            padding: 60px 20px;
+            padding: 100px 20px 120px; /* Slightly reduced but still substantial padding for mobile */
         }
         
         .pss-progress {
@@ -813,7 +816,7 @@ $assets_url = $plugin_url . 'assets/';
 }
 .wooden-plank {
   position: absolute;
-  top: 100px;
+  top: 150px;
   left: -14%;
   width: 65%;
   height: auto;
@@ -842,7 +845,7 @@ $assets_url = $plugin_url . 'assets/';
   max-width: 100%;
   filter: drop-shadow(2px 2px 1px #203d0a) drop-shadow(-2px -2px 1px #203d0a)
     drop-shadow(-2px 2px 1px #203d0a) drop-shadow(2px -2px 1px #203d0a);
-  margin-top: 70px;
+  margin-top: 0;
 }
 
 @media (max-width: 992px) {
@@ -1015,7 +1018,7 @@ $assets_url = $plugin_url . 'assets/';
     }
     
     #section-2 .section-content {
-        padding: var(--space-4xl) var(--space-xl);
+        /* Content spacing managed by container padding */
     }
     
     #section-2 .section-content-inner {
@@ -1081,7 +1084,7 @@ $assets_url = $plugin_url . 'assets/';
     }
     
     #section-2 .section-padding-top {
-        padding-top: var(--space-4xl);
+        /* Top padding managed by parent section */
     }
     
     #section-2 .image-wrapper {
@@ -1131,7 +1134,7 @@ $assets_url = $plugin_url . 'assets/';
     }
     
     #section-2 .section-bottom-spacing {
-        padding-bottom: var(--space-4xl);
+        /* Bottom padding managed by parent section */
     }
 
     #section-3 {
@@ -1142,7 +1145,7 @@ $assets_url = $plugin_url . 'assets/';
     #section-4 {
         background: linear-gradient(to top, #203D0A 0%, #6DAB3C 100%);
         color: var(--text-primary);
-        padding: var(--space-4xl) var(--space-xl);
+        /* Inherit padding from .pss-snap-section */
     }
     
     .section-4-content {
@@ -1257,7 +1260,7 @@ $assets_url = $plugin_url . 'assets/';
     #section-5 {
         background: #F3F4F6;
         color: var(--text-primary);
-        padding: var(--space-4xl) var(--space-xl);
+        /* Inherit padding from .pss-snap-section */
     }
     
     .locations-header {
@@ -1331,7 +1334,7 @@ $assets_url = $plugin_url . 'assets/';
     /* Section 6: FAQ */
     .faq-section {
         background-color: white;
-        padding: 4rem 0;
+        /* Inherit padding from .pss-snap-section */
     }
     
     .faq-container {
@@ -1423,7 +1426,7 @@ $assets_url = $plugin_url . 'assets/';
     /* Section 7: House Animals CTA */
     .house-cta-section {
         background: linear-gradient(135deg, #2B5F2F 0%, #6DAB3C 100%);
-        padding: 4rem 0;
+        /* Inherit padding from .pss-snap-section */
         color: white;
     }
     
@@ -2433,7 +2436,7 @@ $assets_url = $plugin_url . 'assets/';
                 </div>
                 
                 <div class="house-cta-content">
-                    <h3 class="house-cta-text">Get Expert Wildlife Removal Today!</h3>
+                    <h3 class="house-cta-text" style="color: white !important; font-size: 3rem; font-weight: 700; margin-bottom: 2rem;">Get Expert Wildlife Removal Today!</h3>
                     <div class="house-cta-buttons">
                         <a href="https://palmettowildlife.futuresite.dev/shedule/" class="btn-primary">Schedule Inspection</a>
                         <a href="https://palmettowildlife.futuresite.dev/wildlife-removal/" class="btn-secondary">Get Started Now</a>
